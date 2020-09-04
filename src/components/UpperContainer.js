@@ -1,51 +1,14 @@
 import React from "react";
+import BlackBoard from './BlackBoard';
 
 
 
 const UpperContainer = () => {
 
-    const styles = {
-        blackboard: {
-            width: 800,
-            height: 650,
-            position: "absolute",
-            left: "50%",
-            transform: "translate(-50%, 0)",
-            // top: 40, 
-            backgroundColor: "#686e51",
-            borderWidth: 20,
-            borderStyle: "solid",
-            borderColor: "#541717",
-            zIndex: 10,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-end",
-            top: -600
-        },
-        title: {
-            color: "white",
-            width: "100%",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            borderBottomStyle: "solid",
-            borderBottomWidth: 5,
-            borderBottomColor: "white",
-            marginBottom: 0,
-            paddingBottom: "0.5em"
-        }
-    }
 
     return (
         <div className="upper-container">
-            <div style={styles.blackboard}>
-                <h1 style={styles.title}>
-                    Ming Liu
-                    <span style={{ transform: "scale(1.5,1)", color: "red", paddingLeft: 20, paddingRight: 20 }}> ♥ </span>
-                    The Girl Who Codes
-                </h1>
-            </div>
+            <BlackBoard />
             <div className="desk" style={{ zIndex: 4 }}>
                 <div className="desk-trim" />
             </div>

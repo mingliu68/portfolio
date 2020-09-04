@@ -897,6 +897,16 @@ body{
           position:relative;
           height:calc(100vh - 60px);
       }
+
+      .upper-container .boardOn {
+        top: 40px;
+        height: 650px;
+      }
+      .upper-container .boardOff {
+        top: -600px;
+        /* top: -150px; */
+        /* height: 200px; */
+      }
       
       .footer-inner {
           height: 60px;
