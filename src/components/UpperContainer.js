@@ -2,9 +2,7 @@ import React from "react";
 
 
 
-const UpperContainer = ({ activeModal, setActiveModal }) => {
-
-
+const UpperContainer = () => {
 
     const styles = {
         blackboard: {
@@ -30,10 +28,14 @@ const UpperContainer = ({ activeModal, setActiveModal }) => {
             textAlign: "center",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
+            borderBottomStyle: "solid",
+            borderBottomWidth: 5,
+            borderBottomColor: "white",
+            marginBottom: 0,
+            paddingBottom: "0.5em"
         }
     }
-
 
     return (
         <div className="upper-container">

@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="mobile-footer">
                 {footerContent("mobile")}
             </div>
-            <div class="full-footer">
+            <div className="full-footer">
                 {footerContent("full")}
             </div>
         </div>

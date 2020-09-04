@@ -442,7 +442,7 @@ body{
     display: inline-block;
     animation: blink 1.25s infinite;
   }
-  .footer-inner span.diamond {
+  span.diamond {
           font-size:10px;
           animation:none;
           margin: 0 2px;

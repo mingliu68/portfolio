@@ -19,7 +19,7 @@ const ModalContact = () => {
                         <label for="phone">Phone:</label>
                         <input type="text" id="phone" name="phone" />
                     </div>
-                    <div clclassNameass="field">
+                    <div className="field">
                         <label for="email">Email:</label>
                         <input type="text" id="email" name="email" />
                     </div>
