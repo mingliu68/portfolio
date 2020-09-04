@@ -435,7 +435,7 @@ body{
       color: #111111;
       font-weight: 500;
   }
-  .footer-inner span.heart {
+  .footer-inner span.heart{
     color: red;
     font-size: 16px;
     transform: scale(1.5, 1);

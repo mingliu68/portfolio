@@ -27,7 +27,10 @@ const UpperContainer = ({ activeModal, setActiveModal }) => {
         title: {
             color: "white",
             width: "100%",
-            textAlign: "center"
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
         }
     }
 
@@ -35,7 +38,11 @@ const UpperContainer = ({ activeModal, setActiveModal }) => {
     return (
         <div className="upper-container">
             <div style={styles.blackboard}>
-                <h1 style={styles.title}>Ming Liu - The Girl Who Codes</h1>
+                <h1 style={styles.title}>
+                    Ming Liu
+                    <span style={{ transform: "scale(1.5,1)", color: "red", paddingLeft: 20, paddingRight: 20 }}> ♥ </span>
+                    The Girl Who Codes
+                </h1>
             </div>
             <div className="desk" style={{ zIndex: 4 }}>
                 <div className="desk-trim" />
