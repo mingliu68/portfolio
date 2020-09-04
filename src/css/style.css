@@ -1,5 +1,4 @@
 /* 
-    Created on : Mar 15, 2018, 4:49:34 PM
     Author     : Ming Liu
 */
 
@@ -13,12 +12,15 @@ body{
   .upper-container {
         position:relative;
         height:calc(100vh - 85px);
+        /* overflow: hidden; */
       }
   .desk {
         width: 100%; 
         height: 35vh; 
-        position:absolute; 
-        bottom: 0; 
+        /* position:absolute; 
+        bottom: 0;  */
+        position: fixed;
+        bottom: 60px;
         z-index:0; 
         background-color: brown;
   }
@@ -430,6 +432,9 @@ body{
         justify-content: center;
         align-items: center;
         background-color: #f2f2f2;
+        position: fixed;
+        width: 100%;
+        z-index: 20;
   }
   .footer-inner span {
       color: #111111;
@@ -875,7 +880,6 @@ body{
           margin-left:100px;
           margin-top:0;
           padding:5px;
-          
       }
   
       footer {
@@ -896,20 +900,38 @@ body{
       .upper-container {
           position:relative;
           height:calc(100vh - 60px);
+          /* overflow: hidden; */
       }
 
       .upper-container .boardOn {
         top: 40px;
-        height: 650px;
       }
+
       .upper-container .boardOff {
         top: -600px;
         /* top: -150px; */
         /* height: 200px; */
       }
-      
+
+      .upper-container .blackboard {
+        width: 800px;
+        height: 650px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #686e51;
+        border: 20px solid #541717;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        transition-duration: 1s;
+        z-index: 25;
+    }
+    
       .footer-inner {
           height: 60px;
+          position: fixed;
+          width: 100%;
       }
 
       #portfolio .modal-inner {
