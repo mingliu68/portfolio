@@ -8,8 +8,8 @@ const ModalMe = () => {
                 <h4 className="modal-title">ABOUT ME</h4>
                 <button type="button" className="close modal-header-botton" data-dismiss="modal" />
             </div>
-            <div className="modal-inner">
-                <div style={{ lineHeight: 1.2 }}>
+            <div className="modal-inner scroller">
+                <div style={{ lineHeight: 1.2, textAlign: "left" }}>
                     Hi, I am the girl chased by the two beagles and the brain behind Beagle Bits.
                     I am a full stack web developer and iOS mobile developer.
                     I have been building websites since 2003 and it has always been a passion of mine.

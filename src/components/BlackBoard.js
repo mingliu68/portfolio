@@ -5,6 +5,7 @@ import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-
 
 const BlackBoard = () => {
     const [status, setStatus] = useState(false);
+    const [mouseOver, setMouseOver] = useState(0);
 
     const styles = {
         boardOn: {
@@ -24,7 +25,9 @@ const BlackBoard = () => {
             borderBottomWidth: 5,
             borderBottomColor: "white",
             marginBottom: 0,
-            paddingBottom: "0.5em"
+            paddingBottom: "0.5em",
+            fontSize: 28,
+            height: 32,
         },
         pullTag: {
             cursor: 'pointer',
@@ -71,6 +74,81 @@ const BlackBoard = () => {
                         marginTop: -2,
                     }}
                 />
+            </div>
+            <div style={{ position: 'relative', height: 580, width: "100%", paddingTop: 30, backgroundColor: 'green', display: 'flex', flexDirection: "row", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start", boxSizing: "border-box", overflow: "hidden" }}>
+                <div
+                    style={{
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "45%", left: "5%", top: "8%", zIndex: (mouseOver == 1 ? 15 : 10), height: "auto",
+                        backgroundColor: "white",
+                        padding: 5,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        transitionDuration: "0.5s",
+                        transform: (mouseOver == 1 ? "rotate(0deg)" : "rotate(10deg)")
+                    }}
+                    onMouseEnter={() => setMouseOver(1)}
+                >
+                    {/* <div style={{ width: 15, height: 15, borderWidth: 2, borderColor: "white", borderStyle: "solid", position: "absolute", right: 0, top: -18, boxSizing: "border-box" }}></div> */}
+                    <img src="http://www.brooksidemediaco.com/wp-content/uploads/2018/05/sarama_home.png" style={{ width: "100%" }} />
+                </div>
+
+                <div style={{
+                    borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "45%", left: "8%", bottom: "8%", zIndex: (mouseOver == 2 ? 15 : 10), height: "auto",
+                    backgroundColor: "white",
+                    padding: 5,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    transitionDuration: "0.5s",
+                    transform: (mouseOver == 2 ? "rotate(0deg)" : "rotate(-7deg)")
+                }}
+                    onMouseEnter={() => setMouseOver(2)}
+                >
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-4.22.10-PM.png" style={{ width: "100%" }} />
+                </div>
+
+
+                <div
+                    style={{
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "50%", right: "7%", top: "10%", zIndex: (mouseOver == 3 ? 15 : 10), height: "auto",
+                        backgroundColor: "white",
+                        padding: 5,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        transitionDuration: "0.5s",
+                        transform: (mouseOver == 3 ? "rotate(0deg)" : "rotate(-5deg)")
+
+                    }}
+                    onMouseEnter={() => setMouseOver(3)}
+                >
+
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/brooksidemedia_home.png" style={{ width: "100%" }} />
+                </div>
+                <div
+                    style={{
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "40%", right: "5%", bottom: "8%", zIndex: (mouseOver == 4 ? 15 : 10), height: "auto",
+                        backgroundColor: "white",
+                        padding: 5,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        transitionDuration: "0.5s",
+                        transform: (mouseOver == 4 ? "rotate(0deg)" : "rotate(5deg)")
+
+                    }}
+                    onMouseEnter={() => setMouseOver(4)}
+                >
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png" style={{ width: "100%" }} />
+
+                </div>
+
+
             </div>
             <h1 style={styles.title}>
                 Ming Liu
