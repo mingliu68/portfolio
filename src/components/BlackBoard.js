@@ -5,7 +5,8 @@ import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-
 
 const BlackBoard = () => {
     const [status, setStatus] = useState(false);
-    const [mouseOver, setMouseOver] = useState(0);
+    const [mouseOver, setMouseOver] = useState(6);
+    const [enlarge, setEnlarge] = useState(0)
 
     const styles = {
         boardOn: {
@@ -37,7 +38,8 @@ const BlackBoard = () => {
             position: "absolute",
             bottom: -60,
             right: 0,
-        }
+        },
+
     }
 
     const setBlackBoard = useCallback(() => {
@@ -78,95 +80,176 @@ const BlackBoard = () => {
             <div style={{ position: 'relative', height: 580, width: "100%", paddingTop: 30, backgroundColor: 'green', display: 'flex', flexDirection: "row", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start", boxSizing: "border-box", overflow: "hidden" }}>
                 <div
                     style={{
-                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "45%", left: "5%", top: "8%", zIndex: (mouseOver == 1 ? 15 : 10), height: "auto",
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 1 ? "black" : "#333"), position: "absolute", left: "35%", top: "3%", zIndex: (mouseOver == 1 ? 15 : 10), height: "auto",
+                        width: "40%",
                         backgroundColor: "white",
-                        padding: 5,
+                        padding: 10,
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (mouseOver == 1 ? "rotate(0deg)" : "rotate(10deg)")
+                        transform: (enlarge == 1 ? "rotate(0deg) scale(1.25) translate(0, 35px) translateZ(0)" : "rotate(4deg) scale(1)"),
+                        backfaceVisibility: "hidden",
+                        webkitBackfaceVisibility: "hidden",
+
+                        display: "flex",
+                        flexDirection: "column"
                     }}
-                    onMouseEnter={() => setMouseOver(1)}
+                    onMouseEnter={() => { setMouseOver(1); setEnlarge(1) }}
+                    onMouseLeave={() => setEnlarge(0)}
                 >
-                    {/* <div style={{ width: 15, height: 15, borderWidth: 2, borderColor: "white", borderStyle: "solid", position: "absolute", right: 0, top: -18, boxSizing: "border-box" }}></div> */}
-                    <img src="http://www.brooksidemediaco.com/wp-content/uploads/2018/05/sarama_home.png" style={{ width: "100%" }} />
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-5.29.39-PM.png"
+                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 1 ? 1 : 0.7) }} />
+
+
+
+                    <div style={{ paddingTop: 15, display: (enlarge == 1 ? "block" : "none") }}>Personal Portfolio - React App</div>
                 </div>
 
+                <div
+                    style={{
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 2 ? "black" : "#333"), position: "absolute", left: "5%", top: "8%", zIndex: (mouseOver == 2 ? 15 : 10), height: "auto",
+                        // width: (enlarge == 2 ? "60%" : "40%"),
+                        width: "40%",
+                        backgroundColor: "white",
+                        padding: 10,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        transitionDuration: "0.5s",
+                        transform: (enlarge == 2 ? "rotate(0deg) scale(1.25) translate(25px, 10px) translateZ(0)" : "rotate(10deg) scale(1)"),
+                        webkitBackfaceVisibility: "hidden",
+                        backfaceVisibility: "hidden",
+                        display: "flex",
+                        flexDirection: "column"
+                    }}
+                    onMouseEnter={() => { setMouseOver(2); setEnlarge(2) }}
+                    onMouseLeave={() => setEnlarge(0)}
+
+                >
+                    {/* <div style={{ width: 15, height: 15, borderWidth: 2, borderColor: "white", borderStyle: "solid", position: "absolute", right: 0, top: -18, boxSizing: "border-box" }}></div> */}
+                    <img src="http://www.brooksidemediaco.com/wp-content/uploads/2018/05/sarama_home.png"
+                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 2 ? 1 : 0.7) }} />
+                    <div style={{ paddingTop: 15, display: (enlarge == 2 ? "block" : "none") }}>Sarama Rescue - WordPress Site</div>
+
+                </div>
                 <div style={{
-                    borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "45%", left: "4%", bottom: "8%", zIndex: (mouseOver == 2 ? 15 : 10), height: "auto",
+                    borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 3 ? "black" : "#333"), position: "absolute", left: "4%", bottom: "8%", zIndex: (mouseOver == 3 ? 15 : 10), height: "auto",
+                    // width: (enlarge == 3 ? "60%" : "45%"),
+                    width: "45%",
                     backgroundColor: "white",
-                    padding: 5,
+                    padding: 10,
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     cursor: "pointer",
                     transitionDuration: "0.5s",
-                    transform: (mouseOver == 2 ? "rotate(0deg)" : "rotate(-7deg)")
+                    transform: (enlarge == 3 ? "rotate(0deg) scale(1.25) translate(25px, 0) translateZ(0)" : "rotate(-7deg) scale(1)"),
+                    backfaceVisibility: "hidden",
+                    webkitBackfaceVisibility: "hidden",
+
+                    display: "flex",
+                    flexDirection: "column"
                 }}
-                    onMouseEnter={() => setMouseOver(2)}
+                    onMouseEnter={() => { setMouseOver(3); setEnlarge(3) }}
+                    onMouseLeave={() => setEnlarge(0)}
+
                 >
-                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-4.22.10-PM.png" style={{ width: "100%" }} />
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-4.22.10-PM.png" alt="pawsnfind"
+                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 3 ? 1 : 0.7) }} />
+                    <div style={{ paddingTop: 15, display: (enlarge == 3 ? "block" : "none") }}>PawsnFind - React App</div>
+
                 </div>
-
-
                 <div
                     style={{
-                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "50%", right: "7%", top: "10%", zIndex: (mouseOver == 3 ? 15 : 10), height: "auto",
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 4 ? "black" : "#333"), position: "absolute", right: "7%", top: "15%", zIndex: (mouseOver == 4 ? 15 : 10), height: "auto",
+                        // width: (enlarge == 4 ? "60%" : "40%"),
+                        width: "40%",
                         backgroundColor: "white",
-                        padding: 5,
+                        padding: 10,
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (mouseOver == 3 ? "rotate(0deg)" : "rotate(-5deg)")
+                        transform: (enlarge == 4 ? "rotate(0deg) scale(1.25) translateZ(0)" : "rotate(-5deg) scale(1)"),
+                        backfaceVisibility: "hidden",
+                        webkitBackfaceVisibility: "hidden",
+
+                        display: "flex",
+                        flexDirection: "column"
 
                     }}
-                    onMouseEnter={() => setMouseOver(3)}
+                    onMouseEnter={() => { setMouseOver(4); setEnlarge(4) }}
+                    onMouseLeave={() => setEnlarge(0)}
+
                 >
 
-                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/brooksidemedia_home.png" style={{ width: "100%" }} />
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/brooksidemedia_home.png"
+                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 4 ? 1 : 0.7) }} />
+                    <div style={{ paddingTop: 15, display: (enlarge == 4 ? "block" : "none") }}>Broodside Media & Co. - WordPress Site</div>
+
                 </div>
                 <div
                     style={{
-                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "40%", right: "5%", bottom: "8%", zIndex: (mouseOver == 4 ? 15 : 10), height: "auto",
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 5 ? "black" : "#333"), position: "absolute", right: "5%", bottom: "8%", zIndex: (mouseOver == 5 ? 15 : 10), height: "auto",
+                        // width: (enlarge == 5 ? "60%" : "40%"),
+                        width: "40%",
                         backgroundColor: "white",
-                        padding: 5,
+                        padding: 10,
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (mouseOver == 4 ? "rotate(0deg)" : "rotate(5deg)")
+                        transform: (enlarge == 5 ? "rotate(0deg) scale(1.25) translate(-25px, 0) translateZ(0)" : "rotate(5deg) scale(1)"),
+                        backfaceVisibility: "hidden",
+                        webkitBackfaceVisibility: "hidden",
+
+                        display: "flex",
+                        flexDirection: "column"
 
                     }}
-                    onMouseEnter={() => setMouseOver(4)}
+                    onMouseEnter={() => { setMouseOver(5); setEnlarge(5) }}
+                    onMouseLeave={() => setEnlarge(0)}
+
                 >
-                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png" style={{ width: "100%" }} />
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png"
+                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 5 ? 1 : 0.7) }} />
+                    <div style={{ paddingTop: 15, display: (enlarge == 5 ? "block" : "none") }}>eCommerce Site - PrestaShop Site</div>
 
                 </div>
                 <div
                     style={{
-                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "35%", left: "35%", bottom: "5%", zIndex: (mouseOver == 5 ? 15 : 10), height: "auto",
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 6 ? "black" : "#333"), position: "absolute", left: "35%", bottom: "5%", zIndex: (mouseOver == 6 ? 15 : 10), height: "auto",
+                        // width: (enlarge == 6 ? "60%" : "40%"),
+                        width: "40%",
                         backgroundColor: "white",
-                        padding: 5,
+                        padding: 10,
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (mouseOver == 5 ? "rotate(0deg)" : "rotate(-4deg)")
+                        transform: (enlarge == 6 ? "rotate(0deg) scale(1.25) translate(0, -25px) translateZ(0)" : "rotate(-4deg) scale(1)"),
+                        backfaceVisibility: "hidden",
+                        webkitBackfaceVisibility: "hidden",
+
+                        display: "flex",
+                        flexDirection: "column"
 
                     }}
-                    onMouseEnter={() => setMouseOver(5)}
+                    onMouseEnter={() => { setMouseOver(6); setEnlarge(6) }}
+                    onMouseLeave={() => setEnlarge(0)}
+
                 >
-                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png" style={{ width: "100%" }} />
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png"
+                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 6 ? 1 : 0.7) }} />
+                    <div style={{ paddingTop: 15, display: (enlarge == 6 ? "block" : "none") }}>eCommerce Site - PrestaShop Site</div>
 
                 </div>
-
-
 
             </div>
             <h1 style={styles.title}>
