@@ -95,7 +95,7 @@ const BlackBoard = () => {
                 </div>
 
                 <div style={{
-                    borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "45%", left: "8%", bottom: "8%", zIndex: (mouseOver == 2 ? 15 : 10), height: "auto",
+                    borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "45%", left: "4%", bottom: "8%", zIndex: (mouseOver == 2 ? 15 : 10), height: "auto",
                     backgroundColor: "white",
                     padding: 5,
                     display: "flex",
@@ -147,6 +147,25 @@ const BlackBoard = () => {
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png" style={{ width: "100%" }} />
 
                 </div>
+                <div
+                    style={{
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: "#333", position: "absolute", width: "35%", left: "35%", bottom: "5%", zIndex: (mouseOver == 5 ? 15 : 10), height: "auto",
+                        backgroundColor: "white",
+                        padding: 5,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        transitionDuration: "0.5s",
+                        transform: (mouseOver == 5 ? "rotate(0deg)" : "rotate(-4deg)")
+
+                    }}
+                    onMouseEnter={() => setMouseOver(5)}
+                >
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png" style={{ width: "100%" }} />
+
+                </div>
+
 
 
             </div>
