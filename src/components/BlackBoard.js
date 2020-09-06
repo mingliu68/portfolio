@@ -89,7 +89,7 @@ const BlackBoard = () => {
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (enlarge == 1 ? "rotate(0deg) scale(1.25) translate(0, 35px) translateZ(0)" : "rotate(4deg) scale(1)"),
+                        transform: (enlarge == 1 ? "rotate(0deg) scale(1.25) translate(0, 35px) translateZ(0)" : "rotate(-4deg) scale(1)"),
                         backfaceVisibility: "hidden",
                         webkitBackfaceVisibility: "hidden",
 
@@ -100,11 +100,17 @@ const BlackBoard = () => {
                     onMouseLeave={() => setEnlarge(0)}
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-5.29.39-PM.png"
-                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 1 ? 1 : 0.7) }} />
+                        style={{
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 1 ? 1 : 0.7),
+                            webkitBackfaceVisibility: "hidden",
+                            msTransform: "translateZ(0)",
+                            webkitTransform: "translateZ(0)",
+                            transform: "translateZ(0)"
+                        }} />
 
 
 
-                    <div style={{ paddingTop: 15, display: (enlarge == 1 ? "block" : "none") }}>Personal Portfolio - React App</div>
+                    <div style={{ paddingTop: 15, color: (mouseOver == 1 ? "#333" : "#ccc") }}>Personal Portfolio - React App</div>
                 </div>
 
                 <div
@@ -131,8 +137,14 @@ const BlackBoard = () => {
                 >
                     {/* <div style={{ width: 15, height: 15, borderWidth: 2, borderColor: "white", borderStyle: "solid", position: "absolute", right: 0, top: -18, boxSizing: "border-box" }}></div> */}
                     <img src="http://www.brooksidemediaco.com/wp-content/uploads/2018/05/sarama_home.png"
-                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 2 ? 1 : 0.7) }} />
-                    <div style={{ paddingTop: 15, display: (enlarge == 2 ? "block" : "none") }}>Sarama Rescue - WordPress Site</div>
+                        style={{
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 2 ? 1 : 0.7),
+                            webkitBackfaceVisibility: "hidden",
+                            msTransform: "translateZ(0)",
+                            webkitTransform: "translateZ(0)",
+                            transform: "translateZ(0)"
+                        }} />
+                    <div style={{ paddingTop: 15, color: (mouseOver == 2 ? "#333" : "#ccc") }}>Sarama Rescue - WordPress Site</div>
 
                 </div>
                 <div style={{
@@ -146,7 +158,7 @@ const BlackBoard = () => {
                     alignItems: "center",
                     cursor: "pointer",
                     transitionDuration: "0.5s",
-                    transform: (enlarge == 3 ? "rotate(0deg) scale(1.25) translate(25px, 0) translateZ(0)" : "rotate(-7deg) scale(1)"),
+                    transform: (enlarge == 3 ? "rotate(0deg) scale(1.25) translate(25px, -10px) translateZ(0)" : "rotate(-7deg) scale(1)"),
                     backfaceVisibility: "hidden",
                     webkitBackfaceVisibility: "hidden",
 
@@ -158,8 +170,14 @@ const BlackBoard = () => {
 
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-4.22.10-PM.png" alt="pawsnfind"
-                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 3 ? 1 : 0.7) }} />
-                    <div style={{ paddingTop: 15, display: (enlarge == 3 ? "block" : "none") }}>PawsnFind - React App</div>
+                        style={{
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 3 ? 1 : 0.7),
+                            webkitBackfaceVisibility: "hidden",
+                            msTransform: "translateZ(0)",
+                            webkitTransform: "translateZ(0)",
+                            transform: "translateZ(0)"
+                        }} />
+                    <div style={{ paddingTop: 15, color: (mouseOver == 3 ? "#333" : "#ccc") }}>PawsnFind - React App</div>
 
                 </div>
                 <div
@@ -188,8 +206,14 @@ const BlackBoard = () => {
                 >
 
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/brooksidemedia_home.png"
-                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 4 ? 1 : 0.7) }} />
-                    <div style={{ paddingTop: 15, display: (enlarge == 4 ? "block" : "none") }}>Broodside Media & Co. - WordPress Site</div>
+                        style={{
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 4 ? 1 : 0.7),
+                            webkitBackfaceVisibility: "hidden",
+                            msTransform: "translateZ(0)",
+                            webkitTransform: "translateZ(0)",
+                            transform: "translateZ(0)"
+                        }} />
+                    <div style={{ paddingTop: 15, color: (mouseOver == 4 ? "#333" : "#ccc") }}>Broodside Media & Co. - WordPress Site</div>
 
                 </div>
                 <div
@@ -204,7 +228,7 @@ const BlackBoard = () => {
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (enlarge == 5 ? "rotate(0deg) scale(1.25) translate(-25px, 0) translateZ(0)" : "rotate(5deg) scale(1)"),
+                        transform: (enlarge == 5 ? "rotate(0deg) scale(1.25) translate(-25px, -10px) translateZ(0)" : "rotate(5deg) scale(1)"),
                         backfaceVisibility: "hidden",
                         webkitBackfaceVisibility: "hidden",
 
@@ -217,13 +241,19 @@ const BlackBoard = () => {
 
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png"
-                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 5 ? 1 : 0.7) }} />
-                    <div style={{ paddingTop: 15, display: (enlarge == 5 ? "block" : "none") }}>eCommerce Site - PrestaShop Site</div>
+                        style={{
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 5 ? 1 : 0.7),
+                            webkitBackfaceVisibility: "hidden",
+                            msTransform: "translateZ(0)",
+                            webkitTransform: "translateZ(0)",
+                            transform: "translateZ(0)"
+                        }} />
+                    <div style={{ paddingTop: 15, color: (mouseOver == 5 ? "#333" : "#ccc") }}>eCommerce Site - PrestaShop</div>
 
                 </div>
                 <div
                     style={{
-                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 6 ? "black" : "#333"), position: "absolute", left: "35%", bottom: "5%", zIndex: (mouseOver == 6 ? 15 : 10), height: "auto",
+                        borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 6 ? "black" : "#333"), position: "absolute", left: "25%", bottom: "5%", zIndex: (mouseOver == 6 ? 15 : 10), height: "auto",
                         // width: (enlarge == 6 ? "60%" : "40%"),
                         width: "40%",
                         backgroundColor: "white",
@@ -233,7 +263,7 @@ const BlackBoard = () => {
                         alignItems: "center",
                         cursor: "pointer",
                         transitionDuration: "0.5s",
-                        transform: (enlarge == 6 ? "rotate(0deg) scale(1.25) translate(0, -25px) translateZ(0)" : "rotate(-4deg) scale(1)"),
+                        transform: (enlarge == 6 ? "rotate(0deg) scale(1.25) translate(0, -25px) translateZ(0)" : "rotate(3deg) scale(1)"),
                         backfaceVisibility: "hidden",
                         webkitBackfaceVisibility: "hidden",
 
@@ -246,8 +276,14 @@ const BlackBoard = () => {
 
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png"
-                        style={{ boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 6 ? 1 : 0.7) }} />
-                    <div style={{ paddingTop: 15, display: (enlarge == 6 ? "block" : "none") }}>eCommerce Site - PrestaShop Site</div>
+                        style={{
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 6 ? 1 : 0.7),
+                            webkitBackfaceVisibility: "hidden",
+                            msTransform: "translateZ(0)",
+                            webkitTransform: "translateZ(0)",
+                            transform: "translateZ(0)"
+                        }} />
+                    <div style={{ paddingTop: 15, color: (mouseOver == 6 ? "#333" : "#ccc") }}>eCommerce Site - PrestaShop</div>
 
                 </div>
 
