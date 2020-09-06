@@ -51,6 +51,9 @@ const UpperContainer = () => {
                     </div>
                 </div>
             </div>
+            <div className="twitter" style={{ left: "15%", top: "15%" }} />
+            <div className="linkedin" style={{ left: "15%", top: "30%" }} />
+            <div className="github" style={{ left: "15%", top: "45%" }} />
         </div>
     )
 }

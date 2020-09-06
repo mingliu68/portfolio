@@ -77,7 +77,7 @@ const BlackBoard = () => {
                     }}
                 />
             </div>
-            <div style={{ position: 'relative', height: 580, width: "100%", paddingTop: 30, backgroundColor: 'green', display: 'flex', flexDirection: "row", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start", boxSizing: "border-box", overflow: "hidden" }}>
+            <div style={{ position: 'relative', height: 580, width: "100%", paddingTop: 30, backgroundColor: 'rgb(23 84 23)', display: 'flex', flexDirection: "row", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start", boxSizing: "border-box", overflow: "hidden" }}>
                 <div
                     style={{
                         borderTopWidth: 20, borderStyle: "solid", borderColor: (enlarge == 1 ? "black" : "#333"), position: "absolute", left: "35%", top: "3%", zIndex: (mouseOver == 1 ? 15 : 10), height: "auto",
@@ -99,9 +99,9 @@ const BlackBoard = () => {
                     onMouseEnter={() => { setMouseOver(1); setEnlarge(1) }}
                     onMouseLeave={() => setEnlarge(0)}
                 >
-                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-5.29.39-PM.png"
+                    <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-11.34.50-PM.png"
                         style={{
-                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 1 ? 1 : 0.7),
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 1 ? 1 : 0.65),
                             webkitBackfaceVisibility: "hidden",
                             msTransform: "translateZ(0)",
                             webkitTransform: "translateZ(0)",
@@ -138,7 +138,7 @@ const BlackBoard = () => {
                     {/* <div style={{ width: 15, height: 15, borderWidth: 2, borderColor: "white", borderStyle: "solid", position: "absolute", right: 0, top: -18, boxSizing: "border-box" }}></div> */}
                     <img src="http://www.brooksidemediaco.com/wp-content/uploads/2018/05/sarama_home.png"
                         style={{
-                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 2 ? 1 : 0.7),
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 2 ? 1 : 0.65),
                             webkitBackfaceVisibility: "hidden",
                             msTransform: "translateZ(0)",
                             webkitTransform: "translateZ(0)",
@@ -171,7 +171,7 @@ const BlackBoard = () => {
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-4.22.10-PM.png" alt="pawsnfind"
                         style={{
-                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 3 ? 1 : 0.7),
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 3 ? 1 : 0.65),
                             webkitBackfaceVisibility: "hidden",
                             msTransform: "translateZ(0)",
                             webkitTransform: "translateZ(0)",
@@ -207,13 +207,13 @@ const BlackBoard = () => {
 
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/brooksidemedia_home.png"
                         style={{
-                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 4 ? 1 : 0.7),
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 4 ? 1 : 0.65),
                             webkitBackfaceVisibility: "hidden",
                             msTransform: "translateZ(0)",
                             webkitTransform: "translateZ(0)",
                             transform: "translateZ(0)"
                         }} />
-                    <div style={{ paddingTop: 15, color: (mouseOver == 4 ? "#333" : "#ccc") }}>Broodside Media & Co. - WordPress Site</div>
+                    <div style={{ paddingTop: 15, color: (mouseOver == 4 ? "#333" : "#ccc") }}>Broodside Media - WordPress Site</div>
 
                 </div>
                 <div
@@ -242,7 +242,7 @@ const BlackBoard = () => {
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png"
                         style={{
-                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 5 ? 1 : 0.7),
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 5 ? 1 : 0.65),
                             webkitBackfaceVisibility: "hidden",
                             msTransform: "translateZ(0)",
                             webkitTransform: "translateZ(0)",
@@ -266,18 +266,15 @@ const BlackBoard = () => {
                         transform: (enlarge == 6 ? "rotate(0deg) scale(1.25) translate(0, -25px) translateZ(0)" : "rotate(3deg) scale(1)"),
                         backfaceVisibility: "hidden",
                         webkitBackfaceVisibility: "hidden",
-
                         display: "flex",
                         flexDirection: "column"
-
                     }}
                     onMouseEnter={() => { setMouseOver(6); setEnlarge(6) }}
                     onMouseLeave={() => setEnlarge(0)}
-
                 >
                     <img src="https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png"
                         style={{
-                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 6 ? 1 : 0.7),
+                            boxShadow: "0px 0px 5px #bbbbbb", width: "100%", border: "1px solid #eeeeee", opacity: (mouseOver == 6 ? 1 : 0.65),
                             webkitBackfaceVisibility: "hidden",
                             msTransform: "translateZ(0)",
                             webkitTransform: "translateZ(0)",
