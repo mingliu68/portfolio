@@ -1,6 +1,7 @@
 import React from "react";
 import BlackBoard from './BlackBoard';
 import { wallart } from '../data';
+import WallArt from './WallArt';
 
 
 const UpperContainer = () => {
@@ -54,11 +55,7 @@ const UpperContainer = () => {
             {
                 wallart.map((item, index) => {
                     return (
-                        <div key={index} className={item.name} style={{ left: item.left, top: item.top, transform: item.transform }} >
-                            <a href={item.link} target="_blank" rel="noreferrer">
-                                <div style={{ cursor: "pointer", width: 105, height: 105 }} />
-                            </a>
-                        </div>
+                        <WallArt item={item} index={index} />
                     )
                 })
             }
@@ -66,6 +63,5 @@ const UpperContainer = () => {
         </div>
     )
 }
-
 
 export default UpperContainer;
