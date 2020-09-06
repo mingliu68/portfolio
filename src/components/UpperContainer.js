@@ -31,7 +31,7 @@ const UpperContainer = () => {
                             <p>based in New York, NY. </p>
                             <p>I build web & mobile apps on </p>
                             <p>weekdays and run wild with my two </p>
-                            <p>obnoxious Beagles on weekends. </p>
+                            <p>obnoxious Beagles on the weekends. </p>
                             <p>Feel free to click around my</p>
                             <p>pixelated world<span>|</span></p>
                         </div>

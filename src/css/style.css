@@ -947,6 +947,17 @@ body{
         min-width: 550px;
         flex-direction: column;
     }
+
+      .upper-container .blackboard .pulltag-container {
+        height: 60px;
+        width: 60px; 
+        position: absolute;
+        bottom: -80px;
+        right: 0;
+        cursor: pointer;
+        display: flex; 
+        flex-direction: column
+      }
     
       .upper-container .blackboard .project-container {
         position: relative;
