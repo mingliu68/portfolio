@@ -70,7 +70,7 @@ export const projects = [
         name: "Personal Portfolio",
         display: "Personal Portfolio - React App",
         tech: ["React", "JavaScript", "HTML5", "CSS3",],
-        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/portfolio_home.png"
+        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/mingliu_portfolio.png"
     },
     {
         name: "Sarama Animal Rescue",
@@ -103,4 +103,37 @@ export const projects = [
         img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png",
     },
 
+]
+
+export const wallart = [
+    {
+        name: "twitter",
+        type: "social",
+        link: "https://twitter.com/mingliu68",
+        top: 100,
+        bottom: null,
+        left: "50%",
+        right: null,
+        transform: "translate(-400px, 0)"
+    },
+    {
+        name: "linkedin",
+        type: "social",
+        link: "https://www.linkedin.com/in/mingliu68/",
+        top: 220,
+        bottom: null,
+        left: "50%",
+        right: null,
+        transform: "translate(-400px, 0)"
+    },
+    {
+        name: "github",
+        type: "social",
+        link: "https://github.com/mingliu68",
+        top: 340,
+        bottom: null,
+        left: "50%",
+        right: null,
+        transform: "translate(-400px, 0)"
+    },
 ]

@@ -76,15 +76,6 @@ const styles = {
         fontSize: 28,
         height: 32,
     },
-    pullTag: {
-        cursor: 'pointer',
-        width: 60,
-        height: 40,
-        backgroundColor: "yellow",
-        position: "absolute",
-        bottom: -60,
-        right: 0,
-    },
     arrow: {
         position: "absolute",
         left: "50%",

@@ -19,7 +19,7 @@ const ProjectBox = (props) => {
             onMouseEnter={() => { setMouseOver(index + 1); setEnlarge(index + 1) }}
             onMouseLeave={() => setEnlarge(0)}
         >
-            <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.name} />
+            <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.display} />
             <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}</div>
         </div>
     )

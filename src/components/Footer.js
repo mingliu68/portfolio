@@ -9,7 +9,6 @@ const Footer = () => {
             <div>
                 <span className="copyright">&copy;</span>
                 <span>{year} Ming Liu </span>
-
                 {
                     viewType === "mobile"
                         ? <br />
@@ -23,6 +22,7 @@ const Footer = () => {
                 <span className="diamond">&diams;</span>
                 <span> Built in NY with </span>
                 <span className="heart">♥</span>
+                <span> and React</span>
             </div>
         )
     }
