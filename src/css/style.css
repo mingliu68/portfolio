@@ -16,14 +16,14 @@ body{
       }
   .desk {
         width: 100%; 
-        height: 35vh; 
+        height: 25vh; 
         /* position:absolute; 
         bottom: 0;  */
         position: fixed;
         bottom: 60px;
         z-index:0; 
         background-color: #9a2727;
-        border-top: 85px solid #b13838;
+        border-top: 10vh solid #b13838;
         box-sizing: border-box;
   }
   .desk-trim {

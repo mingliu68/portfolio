@@ -12,21 +12,18 @@ const WallArt = (props) => {
     const handleMouseDown = (e) => {
         e.preventDefault();
         const rect = e.target.getBoundingClientRect()
-
         setMouseDown(true);
         setLeftPos(rect.left)
         setTopPos(rect.top)
         setTransformPos(null)
-        // setLeftPos(e.clientX - width * 0.5);
-        // setTopPos(e.clientY - height * 0.5);
-        console.log("mousedown", leftPos, topPos)
     }
 
     const mouseDrag = (e) => {
         e.preventDefault();
+        // const rect = e.target.getBoundingClientRect()
         if (mouseDown) {
             setMove(true);
-            setLeftPos(e.clientX - width * 0.5);
+            setLeftPos(e.clientX + width > window.innerWidth ? window.innerWidth - width - 10 : e.clientX - width * 0.5);
             setTopPos(e.clientY - height * 0.5);
         }
     }
@@ -48,7 +45,6 @@ const WallArt = (props) => {
         <div
             key={props.index}
             className={name}
-            // style={{ left: leftPos, right: right, top: topPos, bottom: bottom, transform: transformPos }}
             style={{ left: leftPos, right: right, top: topPos, bottom: bottom, transform: transformPos }}
             onMouseDown={e => handleMouseDown(e)}
             onMouseMove={e => mouseDrag(e)}
