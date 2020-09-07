@@ -55,11 +55,10 @@ const UpperContainer = () => {
             {
                 wallart.map((item, index) => {
                     return (
-                        <WallArt item={item} index={index} />
+                        <WallArt key={index} item={item} index={index} />
                     )
                 })
             }
-
         </div>
     )
 }

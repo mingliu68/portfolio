@@ -114,7 +114,9 @@ export const wallart = [
         bottom: null,
         left: "50%",
         right: null,
-        transform: "translate(-400px, 0)"
+        transform: "translate(-400px, 0)",
+        width: 105,
+        height: 105,
     },
     {
         name: "linkedin",
@@ -124,7 +126,9 @@ export const wallart = [
         bottom: null,
         left: "50%",
         right: null,
-        transform: "translate(-400px, 0)"
+        transform: "translate(-400px, 0)",
+        width: 105,
+        height: 105,
     },
     {
         name: "github",
@@ -134,6 +138,20 @@ export const wallart = [
         bottom: null,
         left: "50%",
         right: null,
-        transform: "translate(-400px, 0)"
+        transform: "translate(-400px, 0)",
+        width: 105,
+        height: 105,
+    },
+    {
+        name: "wallart",
+        type: "art",
+        link: null,
+        top: 340,
+        bottom: null,
+        left: "50%",
+        right: null,
+        transform: "translate(300px, 0)",
+        width: 105,
+        height: 105,
     },
 ]

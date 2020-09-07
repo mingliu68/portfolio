@@ -61,6 +61,10 @@ body{
         animation-duration:17s;
         animation-name: slidein1;
   }   
+  .wallart {
+    position: absolute;
+    background-color: grey;
+  }
 
   .linkedin {
     position: absolute;
