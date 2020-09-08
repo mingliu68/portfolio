@@ -60,19 +60,13 @@ export const project_position = [
         left: "25%",
         right: null,
         transformPost: "rotate(0deg) scale(1.25) translate(0, -25px) translateZ(0)", //transformPost => transforming
-        transformPre: "rotate(3deg) scale(1)",  // transformPre => return to original
+        transformPre: "rotate(2deg) scale(1)",  // transformPre => return to original
     },
 
 ]
 
 export const projects = [
-    {
-        name: "Personal Portfolio",
-        display: "Personal Portfolio - React App",
-        tech: ["React", "JavaScript", "HTML5", "CSS3",],
-        // img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/mingliu_portfolio.png"
-        img: "/img/mingliuPortfolio_home.png"
-    },
+
     {
         name: "Sarama Animal Rescue",
         display: "Sarama Rescue - WordPress Site",
@@ -102,6 +96,12 @@ export const projects = [
         display: "eCommerce Site - PrestaShop",
         tech: ["PHP", "JavaScript", "HTML5", "CSS3", "PrestaShop", "JQuery"],
         img: "/img/peachLemon_home.png",
+    },
+    {
+        name: "Personal Portfolio",
+        display: "Personal Portfolio - React App",
+        tech: ["React", "JavaScript", "HTML5", "CSS3",],
+        img: "/img/mingliuPortfolio_home.png"
     },
 
 ]

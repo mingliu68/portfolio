@@ -39,7 +39,6 @@ const BlackBoard = () => {
                                 project={project}
                                 index={index}
                                 key={index}
-                                active={active}
                                 setActive={setActive}
                             />
                         )

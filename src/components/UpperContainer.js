@@ -15,7 +15,7 @@ const UpperContainer = () => {
             </div>
             <div className="container" style={{ zIndex: 5 }}>
                 <div className="desktop">
-                    <div className="pc_frame">
+                    <div className="pc_frame" id="pc_frame">
                         <div className="girl_box">
                             <div id="girl" />
                         </div>

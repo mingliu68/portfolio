@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectBox = (props) => {
 
-    const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index, active, setActive } = { ...props }
+    const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index, setActive } = { ...props }
 
     return (
         <div
