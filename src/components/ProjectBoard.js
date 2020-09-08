@@ -13,7 +13,7 @@ const ProjectBoard = (props) => {
                 transitionDuration: "0.5s",
                 zIndex: 20,
                 bottom: (active ? 0 : -580),
-                transitionDelay: "0.5s"
+                transitionDelay: "0.3s"
             }}
             onClick={() => setActive(0)}
         >
