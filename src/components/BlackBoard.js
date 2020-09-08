@@ -3,17 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 import { project_position, projects } from '../data';
 import ProjectBox from './ProjectBox';
+import ProjectBoard from './ProjectBoard';
 
 const BlackBoard = () => {
     const [status, setStatus] = useState(false);
     const [mouseOver, setMouseOver] = useState(projects.length);
     const [enlarge, setEnlarge] = useState(0)
+    const [active, setActive] = useState(0)
 
     return (
         <div className="blackboard" style={status ? styles.boardOn : styles.boardOff}>
             <div
                 className="pulltag-container"
-                onClick={() => setStatus(!status)}
+                onClick={() => { setStatus(!status); setActive(0) }}
             >
                 <div style={{ width: "100%", minHeight: 40, backgroundColor: "yellow" }} />
                 <div style={styles.triangle} />
@@ -37,10 +39,16 @@ const BlackBoard = () => {
                                 project={project}
                                 index={index}
                                 key={index}
+                                active={active}
+                                setActive={setActive}
                             />
                         )
                     })
                 }
+                <ProjectBoard
+                    active={active}
+                    setActive={setActive}
+                />
             </div>
 
             <h1 style={styles.title}>

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectBox = (props) => {
 
-    const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index } = { ...props }
+    const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index, active, setActive } = { ...props }
 
     return (
         <div
@@ -18,6 +18,7 @@ const ProjectBox = (props) => {
             }}
             onMouseEnter={() => { setMouseOver(index + 1); setEnlarge(index + 1) }}
             onMouseLeave={() => setEnlarge(0)}
+            onClick={() => setActive(index + 1)}
         >
             <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.display} />
             <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}</div>

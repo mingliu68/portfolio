@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 
 const WallArt = (props) => {
-    const { type, link, name, top, bottom, left, right, transform, width, height } = { ...props.item }
+    const { type, link, name, top, left, transform, width, height } = { ...props.item }
 
     const [leftPos, setLeftPos] = useState(left);
     const [topPos, setTopPos] = useState(top)
     const [transformPos, setTransformPos] = useState(transform)
     const [mouseDown, setMouseDown] = useState(false);
     const [move, setMove] = useState(false);
+
+    let windowInner = window.innerWidth;
 
     const handleMouseDown = (e) => {
         e.preventDefault();
@@ -20,11 +22,11 @@ const WallArt = (props) => {
 
     const mouseDrag = (e) => {
         e.preventDefault();
-        // const rect = e.target.getBoundingClientRect()
         if (mouseDown) {
             setMove(true);
-            setLeftPos(e.clientX + width > window.innerWidth ? window.innerWidth - width - 10 : e.clientX - width * 0.5);
+            // setLeftPos(e.clientX + width > windowInner ? windowInner - width - 10 : e.clientX - width * 0.5);
             setTopPos(e.clientY - height * 0.5);
+            setLeftPos(e.clientX - width * 0.5);
         }
     }
 
@@ -43,9 +45,13 @@ const WallArt = (props) => {
 
     return (
         <div
-            key={props.index}
             className={name}
-            style={{ left: leftPos, right: right, top: topPos, bottom: bottom, transform: transformPos }}
+            style={{
+                left: leftPos,
+                top: topPos,
+                transform: transformPos,
+                zIndex: (mouseDown ? 1 : 0)
+            }}
             onMouseDown={e => handleMouseDown(e)}
             onMouseMove={e => mouseDrag(e)}
             onMouseUp={e => closeMouseDragEvent(e)}

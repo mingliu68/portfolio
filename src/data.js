@@ -70,37 +70,38 @@ export const projects = [
         name: "Personal Portfolio",
         display: "Personal Portfolio - React App",
         tech: ["React", "JavaScript", "HTML5", "CSS3",],
-        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/mingliu_portfolio.png"
+        // img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/mingliu_portfolio.png"
+        img: "/img/mingliuPortfolio_home.png"
     },
     {
         name: "Sarama Animal Rescue",
         display: "Sarama Rescue - WordPress Site",
         tech: ["PHP", "JavaScript", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
-        img: "http://www.brooksidemediaco.com/wp-content/uploads/2018/05/sarama_home.png",
+        img: "/img/sarama_home.png",
     },
     {
         name: "PawsnFind",
         display: "PawsnFind - React App",
         tech: [],
-        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-05-at-4.22.10-PM.png"
+        img: "/img/pawsnfind_home.png"
     },
     {
         name: "Brookside Media & Co.",
         display: "Brookside Media - WordPress Site",
         tech: ["PHP", "JavaScript", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
-        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/brooksidemedia_home.png",
+        img: "/img/brooksidemedia_home.png",
     },
     {
         name: "SkinDecoded",
         display: "eCommerce Site - PrestaShop",
         tech: ["PHP", "JavaScript", "HTML5", "CSS3", "PrestaShop", "JQuery"],
-        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/skinDecoded_2.png",
+        img: "/img/skinDecoded_home.png",
     },
     {
         name: "Peach&Lemon",
         display: "eCommerce Site - PrestaShop",
         tech: ["PHP", "JavaScript", "HTML5", "CSS3", "PrestaShop", "JQuery"],
-        img: "https://www.brooksidemediaco.com/wp-content/uploads/2020/09/peachLemonHome.png",
+        img: "/img/peachLemon_home.png",
     },
 
 ]
@@ -111,9 +112,8 @@ export const wallart = [
         type: "social",
         link: "https://twitter.com/mingliu68",
         top: 100,
-        bottom: null,
+
         left: "50%",
-        right: null,
         transform: "translate(-400px, 0)",
         width: 105,
         height: 105,
@@ -123,9 +123,7 @@ export const wallart = [
         type: "social",
         link: "https://www.linkedin.com/in/mingliu68/",
         top: 220,
-        bottom: null,
         left: "50%",
-        right: null,
         transform: "translate(-400px, 0)",
         width: 105,
         height: 105,
@@ -135,9 +133,7 @@ export const wallart = [
         type: "social",
         link: "https://github.com/mingliu68",
         top: 340,
-        bottom: null,
         left: "50%",
-        right: null,
         transform: "translate(-400px, 0)",
         width: 105,
         height: 105,
@@ -147,9 +143,7 @@ export const wallart = [
         type: "art",
         link: null,
         top: 340,
-        bottom: null,
         left: "50%",
-        right: null,
         transform: "translate(300px, 0)",
         width: 105,
         height: 105,

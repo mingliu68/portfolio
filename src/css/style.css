@@ -12,7 +12,7 @@ body{
   .upper-container {
         position:relative;
         height:calc(100vh - 85px);
-        /* overflow: hidden; */
+        overflow-x: hidden;
       }
   .desk {
         width: 100%; 

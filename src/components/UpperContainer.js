@@ -10,7 +10,7 @@ const UpperContainer = () => {
     return (
         <div className="upper-container">
             <BlackBoard />
-            <div className="desk" style={{ zIndex: 4 }}>
+            <div className="desk" style={{ zIndex: -1 }}>
                 <div className="desk-trim" />
             </div>
             <div className="container" style={{ zIndex: 5 }}>
