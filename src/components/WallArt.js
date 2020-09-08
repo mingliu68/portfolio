@@ -34,7 +34,7 @@ const WallArt = (props) => {
         if (mouseDown && !move && type === "social") {
             openLink(link)
         }
-        if ((leftPos + width > pc.left && leftPos < pc.right) && (topPos + height > pc.top && topPos < pc.bottom)) {
+        if ((leftPos + width > pc.left && leftPos < pc.right) && (topPos + height > pc.top - 150 && topPos < pc.bottom + 150)) {
             setLeftPos(origPos[0])
             setTopPos(origPos[1])
         }

@@ -610,7 +610,8 @@ body{
   
       .pc_frame {
         width:420px;
-        height:300px;
+        /* height:300px; */
+        height: 280px;
         margin:150px 50px 170px;
         position:absolute;
         overflow:hidden;
