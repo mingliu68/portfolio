@@ -57,7 +57,6 @@ const WallArt = (props) => {
 
     useEffect(() => {
         setPc(document.querySelector('#pc_frame').getBoundingClientRect());
-
     }, [])
 
     window.onresize = setPcBounding;
