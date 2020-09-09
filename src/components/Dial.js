@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Dial = (props) => {
     const { hour, min, type, sec } = { ...props }
-    console.log(hour, min, sec, type)
+    // console.log(hour, min, sec, type)
 
     let setup = {};
     (() => {
@@ -20,7 +20,7 @@ const Dial = (props) => {
             }
         } else if (type === "hour") {
             setup = {
-                temp: -90 + (30 * hour),
+                temp: -90 + (30 * hour) + (Math.floor(min / 10) * 5),
                 intervalTime: 600000,
                 intervalRotate: 5
             }
@@ -30,31 +30,29 @@ const Dial = (props) => {
     const [dial, setDial] = useState(setup.temp)
 
     const startDial = () => {
-
         function dialRotation() {
             setup.temp = setup.temp + setup.intervalRotate === 270 ? -90 : setup.temp + setup.intervalRotate;
             setDial(setup.temp)
-            console.log(type, setup.temp)
         }
         setInterval(dialRotation, setup.intervalTime)
     }
 
     useEffect(() => {
-        startDial()
-        console.log(type, setup.temp)
+        startDial();
+        // console.log(type, setup.temp)
     }, [])
 
     return (
         <div
             style={{
-                width: (type === "hour" ? 60 : 80),
-                borderWidth: (type === "second" ? 2 : type === "minute" ? 3 : 4),
-                borderColor: (type === "hour" ? "red" : "black"),
+                width: (type === "hour" ? 25 : type === "minute" ? 40 : 45),
+                borderWidth: (type === "second" ? 1 : "minute" ? 2 : "hour" ? 3 : null),
+                borderColor: (type === "second" ? "red" : "black"),
                 borderStyle: "solid",
                 position: "absolute",
-                left: 100,
-                top: 100,
-                backgroundColor: "black",
+                left: 73,
+                top: 71,
+                backgroundColor: (type === "second" ? "red" : "black"),
                 transformOrigin: "left",
                 transform: `rotate(${dial}deg)`
             }}

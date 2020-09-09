@@ -149,3 +149,5 @@ export const wallart = [
         height: 105,
     },
 ]
+
+export const dials = ["hour", "minute", "second"]

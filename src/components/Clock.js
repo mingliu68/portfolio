@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import Dial from './Dial';
+import { dials } from '../data';
 
 const Clock = () => {
     const today = new Date();
@@ -8,16 +9,20 @@ const Clock = () => {
     const sec = today.getSeconds()
 
     return (
-        <div style={{ position: "absolute", width: 200, height: 200, right: 50, top: 150, backgroundColor: "white" }}>
+
+        <div style={{ position: "absolute", width: 145, height: 145, right: 50, top: 150, }}>
+
             <div style={{ position: "relative", width: "100%", height: "100%" }} >
-                <div>{hour % 12} {min} {sec}</div>
-
-
-                <Dial hour={hour} min={min} sec={sec} type="second" />
-                <Dial hour={hour} min={min} sec={sec} type="minute" />
-                <Dial hour={hour} min={min} sec={sec} type="hour" />
+                {
+                    dials.map((dial, index) => {
+                        return <Dial key={index} hour={hour} min={min} sec={sec} type={dial} />
+                    })
+                }
+                <div class="clock" style={{ zIndex: -1 }}>
+                </div>
             </div>
         </div>
+
     )
 }
 

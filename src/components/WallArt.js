@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 
 const WallArt = (props) => {
     const { type, link, name, top, left, transform, width, height } = { ...props.item }
