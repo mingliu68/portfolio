@@ -112,7 +112,6 @@ export const wallart = [
         type: "social",
         link: "https://twitter.com/mingliu68",
         top: 100,
-
         left: "50%",
         transform: "translate(-400px, 0)",
         width: 105,

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const Dial = (props) => {
-    const { hour, min, type, sec } = { ...props }
-    // console.log(hour, min, sec, type)
+    const { hour, min, type } = { ...props }
 
     let setup = {};
     (() => {
         if (type === "second") {
             setup = {
-                temp: -90 + (6 * sec),
+                temp: -90,
                 intervalTime: 1000,
                 intervalRotate: 6
             }
@@ -39,7 +38,6 @@ const Dial = (props) => {
 
     useEffect(() => {
         startDial();
-        // console.log(type, setup.temp)
     }, [])
 
     return (
