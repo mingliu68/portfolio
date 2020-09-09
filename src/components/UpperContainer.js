@@ -2,6 +2,7 @@ import React from "react";
 import BlackBoard from './BlackBoard';
 import { wallart } from '../data';
 import WallArt from './WallArt';
+import Clock from './Clock';
 
 
 const UpperContainer = () => {
@@ -59,6 +60,7 @@ const UpperContainer = () => {
                     )
                 })
             }
+            <Clock />
         </div>
     )
 }

@@ -3,8 +3,7 @@ import React, { useState, useEffect, useCallback } from "react";
 const WallArt = (props) => {
     const { type, link, name, top, left, transform, width, height } = { ...props.item }
     const [origPos, setOrigPos] = useState(undefined)
-    const [leftPos, setLeftPos] = useState(left);
-    const [topPos, setTopPos] = useState(top)
+    const [pos, setPos] = useState({ left: left, top: top })
     const [transformPos, setTransformPos] = useState(transform)
     const [mouseDown, setMouseDown] = useState(false);
     const [move, setMove] = useState(false);
@@ -14,19 +13,17 @@ const WallArt = (props) => {
         e.preventDefault();
         const rect = e.target.getBoundingClientRect()
         setMouseDown(true);
-        setLeftPos(rect.left)
-        setTopPos(rect.top)
+        setPos({ ...pos, left: rect.left, top: rect.top })
         //set original position to return to if item is dropped to a forbidden zone
-        setOrigPos([rect.left, rect.top])
+        setOrigPos({ left: rect.left, top: rect.top })
         setTransformPos(null)
     }
 
     const mouseDrag = (e) => {
         e.preventDefault();
         if (mouseDown) {
-            setMove(true);
-            setTopPos(e.clientY - height * 0.5);
-            setLeftPos(e.clientX - width * 0.5);
+            if (!move) setMove(true);
+            setPos({ ...pos, left: e.clientX - width * 0.5, top: e.clientY - height * 0.5 })
         }
     }
 
@@ -34,14 +31,15 @@ const WallArt = (props) => {
         if (mouseDown && !move && type === "social") {
             openLink(link)
         }
-        if ((leftPos + width > pc.left && leftPos < pc.right) && (topPos + height > pc.top - 150 && topPos < pc.bottom + 150)) {
-            setLeftPos(origPos[0])
-            setTopPos(origPos[1])
+
+        if ((pos.left + width > pc.left && pos.left < pc.right) && (pos.top + height > pc.top - 150 && pos.top < pc.bottom + 150)) {
+
+            setPos({ ...pos, left: origPos.left, top: origPos.top })
         }
-        console.log("leftPos : ", leftPos,
-            "PcLeft : ", pc.left, "PcRight : ", pc.right,
-            "topPos : ", topPos,
-            "PcTop : ", pc.top, "PcBottom : ", pc.bottom)
+        // console.log("leftPos : ", leftPos,
+        //     "PcLeft : ", pc.left, "PcRight : ", pc.right,
+        //     "topPos : ", topPos,
+        //     "PcTop : ", pc.top, "PcBottom : ", pc.bottom)
         setMouseDown(false)
         setMove(false)
         setOrigPos(undefined)
@@ -52,13 +50,14 @@ const WallArt = (props) => {
         window.open(externalLink, features)
     }
 
-    const setPcBounding = useCallback(() => {
+    const setPcBounding = () => {
         setPc(document.querySelector('#pc_frame').getBoundingClientRect());
         console.log(pc)
-    })
+    }
 
     useEffect(() => {
-        setPcBounding();
+        setPc(document.querySelector('#pc_frame').getBoundingClientRect());
+
     }, [])
 
     window.onresize = setPcBounding;
@@ -67,8 +66,8 @@ const WallArt = (props) => {
         <div
             className={name}
             style={{
-                left: leftPos,
-                top: topPos,
+                left: pos.left,
+                top: pos.top,
                 transform: transformPos,
                 zIndex: (mouseDown ? 15 : 0),
             }}
