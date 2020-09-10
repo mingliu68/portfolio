@@ -137,16 +137,16 @@ export const wallart = [
         width: 105,
         height: 105,
     },
-    {
-        name: "wallart",
-        type: "art",
-        link: null,
-        top: 340,
-        left: "50%",
-        transform: "translate(300px, 0)",
-        width: 105,
-        height: 105,
-    },
+    // {
+    //     name: "wallart",
+    //     type: "art",
+    //     link: null,
+    //     top: 340,
+    //     left: "50%",
+    //     transform: "translate(300px, 0)",
+    //     width: 105,
+    //     height: 105,
+    // },
 ]
 
 export const dials = ["hour", "minute", "second"]

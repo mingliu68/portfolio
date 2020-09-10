@@ -3,6 +3,7 @@ import BlackBoard from './BlackBoard';
 import { wallart } from '../data';
 import WallArt from './WallArt';
 import Clock from './Clock';
+import DrawingBoard from './DrawingBoard';
 
 
 const UpperContainer = () => {
@@ -61,6 +62,7 @@ const UpperContainer = () => {
                 })
             }
             <Clock />
+            <DrawingBoard />
         </div>
     )
 }

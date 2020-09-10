@@ -34,7 +34,6 @@ const Clock = () => {
     }
 
     const closeMouseDragEvent = (e) => {
-
         if ((pos.left + width > pc.left && pos.left < pc.right) && (pos.top + height > pc.top - 150 && pos.top < pc.bottom + 150)) {
             setPos({ ...pos, left: origPos.left, top: origPos.top })
         }
