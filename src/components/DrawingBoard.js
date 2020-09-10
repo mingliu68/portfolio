@@ -44,8 +44,8 @@ const DrawingBoard = () => {
         context.beginPath();
         context.strokeStyle = "black";
         context.lineWidth = 1;
-        context.moveTo(x1, y1);
-        context.lineTo(x2, y2);
+        context.moveTo(x1, y1 / 2);
+        context.lineTo(x2, y2 / 2);
         context.stroke();
         context.closePath();
     }
