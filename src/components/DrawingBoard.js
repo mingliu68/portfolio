@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import ColorPalette from './ColorPalette';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faEraser, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 const DrawingBoard = () => {
 
@@ -8,6 +11,7 @@ const DrawingBoard = () => {
     const [boardContext, setBoardContext] = useState(null)
     const [isEraser, setIsEraser] = useState(false)
     const [isActive, setIsActive] = useState(false)
+    const [ink, setInk] = useState("white")
 
 
     const handleMouseDown = e => {
@@ -37,16 +41,16 @@ const DrawingBoard = () => {
 
     const drawLine = (context, x1, y1, x2, y2) => {
         context.beginPath();
-        context.strokeStyle = isEraser ? "#366F2B" : "white";
+        context.strokeStyle = isEraser ? "#366F2B" : ink;
         context.lineWidth = isEraser ? 6 : 2;
-        context.moveTo(x1 / 1.3, y1 / 2.1);
-        context.lineTo(x2 / 1.3, y2 / 2.1);
+        context.moveTo(x1 / 1.65, y1 / 2.6);
+        context.lineTo(x2 / 1.65, y2 / 2.6);
         context.stroke();
         context.closePath();
     }
 
     const handleClearScreen = () => {
-        boardContext.clearRect(0, 0, 398, 198);
+        boardContext.clearRect(0, 0, 498, 398);
     }
 
     useEffect(() => {
@@ -86,23 +90,35 @@ const DrawingBoard = () => {
             </canvas>
             <div className={isActive ? "drawingBoard_lg" : "drawingBoard"} style={{ zIndex: -1 }} />
             <div
-                style={{ position: "absolute", right: 30, bottom: 15, width: 30, height: 15, backgroundColor: (isEraser ? "black" : "grey"), borderColor: (isEraser ? "red" : null), borderStyle: "solid" }}
+                className="eraser"
+                style={{
+                    display: (isActive ? "flex" : "none"),
+                    borderBottom: (isEraser ? "5px solid green" : "none"),
+                    fontWeight: (isEraser ? 800 : 400)
+                }}
                 onClick={() => setIsEraser(!isEraser)}
             >
-                ERASER
+                <FontAwesomeIcon icon={faEraser} size="1x" />
             </div>
             <div
-                style={{ position: "absolute", right: 100, top: 250, borderColor: "#333333", borderWidth: 1, borderStyle: "solid" }}
+                className="clearCanvas"
+                style={{ display: (isActive ? "flex" : "none") }}
                 onClick={handleClearScreen}
             >
-                Clear
+                <FontAwesomeIcon icon={faTrashAlt} size="1x" />
+
             </div>
             <div
-                style={{ position: "absolute", right: 100, top: 350, borderColor: "#333333", borderWidth: 1, borderStyle: "solid" }}
+                style={{ display: (isActive ? "flex" : "none"), borderLeft: "5px solid brown", justifyContent: "center", alignItems: "center", width: 35, height: 35, backgroundColor: "yellow", position: "absolute", right: 0, bottom: 100 }}
                 onClick={() => setIsActive(false)}
             >
-                Close
+                <FontAwesomeIcon icon={faTimes} size="2x" />
             </div>
+            {
+                isActive
+                    ? <ColorPalette setInk={setInk} ink={ink} />
+                    : null
+            }
 
         </div>
     )

@@ -150,3 +150,5 @@ export const wallart = [
 ]
 
 export const dials = ["hour", "minute", "second"]
+
+export const colors = ["black", "#FF0000", "#FFC107", "#2196F3", "#9C27B0", "white"]
