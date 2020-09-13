@@ -5,39 +5,37 @@ const ProjectBox = (props) => {
     const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index, setActive, active } = { ...props }
 
     return (
-        <div
-            className="project"
-            style={{
-                borderColor: (enlarge === index + 1 ? "black" : "#333"),
-                right: project_position.right,
-                left: project_position.left,
-                top: project_position.top,
-                bottom: project_position.bottom,
-                zIndex: (mouseOver === index + 1 ? 15 : 10),
-                transform: (enlarge === index + 1 ? project_position.transformPost : project_position.transformPre),
-            }}
-            onMouseEnter={() => { setMouseOver(index + 1); setEnlarge(index + 1) }}
-            onMouseLeave={() => setEnlarge(0)}
-            onClick={() => setActive(index + 1)}
-        >
-            <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.display} />
-            <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}
-                <div
-                    className={active === index + 1 ? "project-mobile mobileActive" : "project-mobile mobileNotActive"}
-                // style={{ display: (active === index + 1 ? "flex" : "none"), transitionDuration: "0.3s" }}
-                >
-                    {
-                        project.tech.map((item, index) => {
-                            if (index < project.tech.length - 1) {
-                                return <span>{item}<span style={styles.spanDiamond}>&diams; </span> </span>
-                            } else {
-                                return <span>{item}</span>
-                            }
-                        })
-                    }
+        <div style={{ zIndex: (mouseOver === index + 1 ? 15 : 10) }}>
+            <div
+                className="project"
+                style={{
+                    borderColor: (enlarge === index + 1 ? "black" : "#333"),
+                    right: project_position.right,
+                    left: project_position.left,
+                    top: project_position.top,
+                    bottom: project_position.bottom,
+                    transform: (enlarge === index + 1 ? project_position.transformPost : project_position.transformPre),
+                }}
+                onMouseEnter={() => { setMouseOver(index + 1); setEnlarge(index + 1) }}
+                onMouseLeave={() => setEnlarge(0)}
+                onClick={() => setActive(index + 1)}
+            >
+                <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.display} />
+                <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}
+                    <div
+                        className={active === index + 1 ? "project-mobile mobileActive" : "project-mobile mobileNotActive"}
+                    >
+                        {
+                            project.tech.map((item, index) => {
+                                if (index < project.tech.length - 1) {
+                                    return <span>{item}<span style={styles.spanDiamond}>&diams; </span> </span>
+                                } else {
+                                    return <span>{item}</span>
+                                }
+                            })
+                        }
+                    </div>
                 </div>
-
-
             </div>
         </div>
     )

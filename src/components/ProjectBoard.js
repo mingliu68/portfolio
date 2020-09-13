@@ -5,17 +5,16 @@ import ProjectDetail from './ProjectDetail';
 
 const ProjectBoard = (props) => {
     const { active, setActive, project } = { ...props }
-    const [close, setClose] = useState(false)
 
-    const setClosingStyle = useCallback(() => {
-        setClose(true);
-        setTimeout(() => {
-            setClose(false);
-        }, 0)
-    })
+    // const setClosingStyle = useCallback(() => {
+    //     setClose(true);
+    //     setTimeout(() => {
+    //         setClose(false);
+    //     }, 0)
+    // })
 
     return (
-        <div className={active ? "projectBoard boardActive" : "projectBoard boardNotActive"} style={{ display: (close ? "none" : "block") }}  >
+        <div className={active ? "projectBoard boardActive" : "projectBoard"}   >
             {/* style={{
             position: "absolute",
             width: "calc(100% - 20px)",
@@ -36,8 +35,8 @@ const ProjectBoard = (props) => {
             >
                 <FontAwesomeIcon icon={faTimes} size="2x" />
             </div> */}
-            <div style={{ zIndex: 1, backgroundColor: "white", width: 35, height: 35, borderRadius: "50%", position: "absolute", top: 10, right: 12, display: "flex", justifyContent: "center", alignItems: "center", boxShadow: "1px 1px 10px #ccc" }}>
-                <FontAwesomeIcon icon={faTimes} size="1x" style={{ cursor: "pointer" }} onClick={() => { setActive(0); setClosingStyle() }} />
+            <div className="closeButton">
+                <FontAwesomeIcon icon={faTimes} size="1x" style={{ cursor: "pointer" }} onClick={() => setActive(0)} />
             </div>
             <ProjectDetail project={project} />
 

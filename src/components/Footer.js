@@ -9,6 +9,11 @@ const Footer = () => {
             <div>
                 <span className="copyright">&copy;</span>
                 <span>{year} Ming Liu </span>
+                <span className="diamond">&diams;</span>
+                <span> hello</span>
+                <span className="at">@</span>
+                <span>mingliu.dev </span>
+
                 {
                     viewType === "mobile"
                         ? <br />
@@ -16,10 +21,8 @@ const Footer = () => {
                             ? <span className="diamond">&diams;</span>
                             : null
                 }
-                <span> hello</span>
-                <span className="at">@</span>
-                <span>mingliu.dev </span>
-                <span className="diamond">&diams;</span>
+
+
                 <span> Built in NY with </span>
                 <span className="heart">♥</span>
                 <span> and React</span>

@@ -74,7 +74,8 @@ export const projects = [
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
         img: "/img/sarama_home.png",
         description: "",
-
+        link: "https://sarama.org",
+        github: "",
     },
     {
         name: "PawsnFind",
@@ -83,7 +84,8 @@ export const projects = [
         tech: ["React", "JavaScript", "Redux", "HTML5", "CSS3", "Node.JS", "Express", "PostgreSQL", "PHP", "Material UI", "SendGrid"],
         img: "/img/pawsnfind_home.png",
         description: "",
-
+        link: "https://pawsnfind.com",
+        github: "https://github.com/Pawsnfind",
     },
     {
         name: "Brookside Media & Co.",
@@ -92,6 +94,8 @@ export const projects = [
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "WordPress", "JQuery"],
         img: "/img/brooksidemedia_home.png",
         description: "",
+        link: "https://brooksidemediaco.com",
+        github: "",
     },
     {
         name: "SkinDecoded",
@@ -100,6 +104,8 @@ export const projects = [
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "PrestaShop", "JQuery", "MySQL"],
         img: "/img/skinDecoded_home.png",
         description: "",
+        link: "https://web.archive.org/web/20141222211511/http://www.skindecoded.com/",
+        github: "",
 
     },
     {
@@ -108,6 +114,9 @@ export const projects = [
         display: "eCommerce Site - PrestaShop",
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "PrestaShop", "JQuery", "MySQL"],
         img: "/img/peachLemon_home.png",
+        description: "",
+        link: "",
+        github: "",
     },
     {
         name: "Personal Portfolio",
@@ -116,7 +125,8 @@ export const projects = [
         tech: ["React", "JavaScript", "HTML5", "CSS3"],
         img: "/img/mingliuPortfolio_home.png",
         description: "This is a fun side project turned into a personal portfolio",
-
+        link: "https://mingliu.dev",
+        github: "https://github.com/mingliu68/portfolio",
     },
 
 ]

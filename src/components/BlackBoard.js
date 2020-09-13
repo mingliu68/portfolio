@@ -52,6 +52,7 @@ const BlackBoard = () => {
                     active={active}
                     setActive={setActive}
                 />
+
             </div>
 
             <h1 className={"blackboard-title"}>
