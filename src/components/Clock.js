@@ -9,8 +9,8 @@ const Clock = () => {
     const [width, height] = [145, 145]
 
     const [origPos, setOrigPos] = useState(undefined)
-    const [pos, setPos] = useState({ left: "50%", top: 160 })
-    const [transformPos, setTransformPos] = useState("translate(260px, 0)")
+    const [pos, setPos] = useState({ left: "50%", top: 190 })
+    const [transformPos, setTransformPos] = useState("translate(305px, 0)")
     const [mouseDown, setMouseDown] = useState(false);
     const [move, setMove] = useState(false);
     const [pc, setPc] = useState(undefined)
@@ -56,6 +56,7 @@ const Clock = () => {
     return (
 
         <div
+            className="clock-container"
             style={{
                 position: "absolute",
                 width: width,

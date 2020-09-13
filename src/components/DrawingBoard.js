@@ -5,13 +5,14 @@ import { faTimes, faEraser, faTrashAlt } from '@fortawesome/free-solid-svg-icons
 
 const DrawingBoard = () => {
 
-    let board;
+    // let board;
     const [isDrawing, setIsDrawing] = useState(false);
     const [pos, setPos] = useState({ x: 0, y: 0 })
     const [boardContext, setBoardContext] = useState(null)
     const [isEraser, setIsEraser] = useState(false)
     const [isActive, setIsActive] = useState(false)
     const [ink, setInk] = useState("white")
+
 
 
     const handleMouseDown = e => {
@@ -25,6 +26,7 @@ const DrawingBoard = () => {
 
     const handleDrawing = e => {
         e.preventDefault();
+
         if (isDrawing) {
             drawLine(boardContext, pos.x, pos.y, e.nativeEvent.offsetX, e.nativeEvent.offsetY);
             setPos({ ...pos, x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY })
@@ -54,8 +56,14 @@ const DrawingBoard = () => {
     }
 
     useEffect(() => {
-        // board = document.getElementById("drawingBoard")
-        setBoardContext(document.getElementById("drawingBoard").getContext('2d'))
+
+        let context = document.getElementById("drawingBoard").getContext('2d')
+        setBoardContext(context)
+        let starter = new Image();
+        starter.onload = function () {
+            context.drawImage(starter, 0, 0);
+        }
+        starter.src = '/img/drawingBoard_starter.png';
     }, [])
 
     return (
@@ -65,7 +73,7 @@ const DrawingBoard = () => {
                 id="drawingBoard"
                 className={isActive ? "canvas_active" : "canvas_notActive"}
                 // style={{ position: "absolute", left: (isActive ? 60 : 30), top: (isActive ? 40 : 20), width: (isActive ? 398 : 198), height: (isActive ? 328 : 162) }}
-
+                // onLoad={e => initializeStarterCanvas(e)}
                 onMouseDown={e => {
                     if (isActive) {
                         handleMouseDown(e)
@@ -92,9 +100,9 @@ const DrawingBoard = () => {
             <div
                 className="eraser"
                 style={{
+                    height: (isEraser ? 35 : 30),
                     display: (isActive ? "flex" : "none"),
                     borderBottom: (isEraser ? "5px solid green" : "none"),
-                    fontWeight: (isEraser ? 800 : 400)
                 }}
                 onClick={() => setIsEraser(!isEraser)}
             >
@@ -116,10 +124,15 @@ const DrawingBoard = () => {
             </div>
             {
                 isActive
-                    ? <ColorPalette setInk={setInk} ink={ink} />
+                    ? <ColorPalette setInk={setInk} ink={ink} setIsEraser={setIsEraser} isEraser={isEraser} />
                     : null
             }
-
+            {/* <div
+                style={{ display: (isActive ? "flex" : "none"), borderLeft: "5px solid brown", justifyContent: "center", alignItems: "center", width: 35, height: 35, backgroundColor: "yellow", position: "absolute", right: 0, bottom: 200 }}
+                onClick={saveImg}
+            >
+                save
+            </div> */}
         </div>
     )
 }

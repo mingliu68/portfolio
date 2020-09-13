@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectBox = (props) => {
 
-    const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index, setActive } = { ...props }
+    const { project_position, project, mouseOver, setMouseOver, enlarge, setEnlarge, index, setActive, active } = { ...props }
 
     return (
         <div
@@ -21,9 +21,35 @@ const ProjectBox = (props) => {
             onClick={() => setActive(index + 1)}
         >
             <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.display} />
-            <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}</div>
+            <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}
+                <div
+                    className={active === index + 1 ? "project-mobile mobileActive" : "project-mobile mobileNotActive"}
+                // style={{ display: (active === index + 1 ? "flex" : "none"), transitionDuration: "0.3s" }}
+                >
+                    {
+                        project.tech.map((item, index) => {
+                            if (index < project.tech.length - 1) {
+                                return <span>{item}<span style={styles.spanDiamond}>&diams; </span> </span>
+                            } else {
+                                return <span>{item}</span>
+                            }
+                        })
+                    }
+                </div>
+
+
+            </div>
         </div>
     )
 }
 
 export default ProjectBox;
+
+const styles = {
+    spanDiamond: {
+        marginLeft: 10,
+        marginRight: 10,
+        fontSize: 10,
+        animation: "none",
+    }
+}

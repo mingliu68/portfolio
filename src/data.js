@@ -15,7 +15,7 @@ export const skillset = [
 
 export const project_position = [
     {
-        top: "3%",
+        top: "5%",
         bottom: null,
         left: "35%",
         right: null,
@@ -70,38 +70,53 @@ export const projects = [
     {
         name: "Sarama Animal Rescue",
         display: "Sarama Rescue - WordPress Site",
-        tech: ["PHP", "JavaScript", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
+        boardDisplay: "Sarama Animal Rescue",
+        tech: ["JavaScript", "PHP", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
         img: "/img/sarama_home.png",
+        description: "",
+
     },
     {
         name: "PawsnFind",
         display: "PawsnFind - React App",
-        tech: [],
-        img: "/img/pawsnfind_home.png"
+        boardDisplay: "PawsnFind",
+        tech: ["React", "JavaScript", "Redux", "HTML5", "CSS3", "Node.JS", "Express", "PostgreSQL", "PHP", "Material UI", "SendGrid"],
+        img: "/img/pawsnfind_home.png",
+        description: "",
+
     },
     {
         name: "Brookside Media & Co.",
         display: "Brookside Media - WordPress Site",
-        tech: ["PHP", "JavaScript", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
+        boardDisplay: "Brookside Media & Co.",
+        tech: ["JavaScript", "PHP", "HTML5", "CSS3", "WordPress", "JQuery"],
         img: "/img/brooksidemedia_home.png",
+        description: "",
     },
     {
         name: "SkinDecoded",
         display: "eCommerce Site - PrestaShop",
-        tech: ["PHP", "JavaScript", "HTML5", "CSS3", "PrestaShop", "JQuery"],
+        boardDisplay: "eCommerce Site",
+        tech: ["JavaScript", "PHP", "HTML5", "CSS3", "PrestaShop", "JQuery", "MySQL"],
         img: "/img/skinDecoded_home.png",
+        description: "",
+
     },
     {
         name: "Peach&Lemon",
+        boardDisplay: "eCommerce Site",
         display: "eCommerce Site - PrestaShop",
-        tech: ["PHP", "JavaScript", "HTML5", "CSS3", "PrestaShop", "JQuery"],
+        tech: ["JavaScript", "PHP", "HTML5", "CSS3", "PrestaShop", "JQuery", "MySQL"],
         img: "/img/peachLemon_home.png",
     },
     {
         name: "Personal Portfolio",
+        boardDisplay: "Personal Portfolio",
         display: "Personal Portfolio - React App",
-        tech: ["React", "JavaScript", "HTML5", "CSS3",],
-        img: "/img/mingliuPortfolio_home.png"
+        tech: ["React", "JavaScript", "HTML5", "CSS3"],
+        img: "/img/mingliuPortfolio_home.png",
+        description: "This is a fun side project turned into a personal portfolio",
+
     },
 
 ]
@@ -137,18 +152,18 @@ export const wallart = [
         width: 105,
         height: 105,
     },
-    // {
-    //     name: "wallart",
-    //     type: "art",
-    //     link: null,
-    //     top: 340,
-    //     left: "50%",
-    //     transform: "translate(300px, 0)",
-    //     width: 105,
-    //     height: 105,
-    // },
+    {
+        name: "resume",
+        type: "social",
+        link: "https://google.com",
+        top: 460,
+        left: "50%",
+        transform: "translate(-400px, 0)",
+        width: 105,
+        height: 125,
+    },
 ]
 
 export const dials = ["hour", "minute", "second"]
 
-export const colors = ["black", "#FF0000", "#FFC107", "#2196F3", "#9C27B0", "white"]
+export const colors = ["white", "#FF0000", "#FFC107", "#2196F3", "#9C27B0", "black"]

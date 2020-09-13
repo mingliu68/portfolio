@@ -12,7 +12,8 @@ const BlackBoard = () => {
     const [active, setActive] = useState(0)
 
     return (
-        <div className="blackboard" style={status ? styles.boardOn : styles.boardOff}>
+        // <div className="blackboard" style={status ? styles.boardOn : styles.boardOff}>
+        <div className={status ? "blackboard boardOn" : "blackboard boardOff"} >
             <div
                 className="pulltag-container"
                 onClick={() => { setStatus(!status); setActive(0) }}
@@ -40,17 +41,20 @@ const BlackBoard = () => {
                                 index={index}
                                 key={index}
                                 setActive={setActive}
+                                active={active}
                             />
                         )
                     })
                 }
+
                 <ProjectBoard
+                    project={projects[active - 1]}
                     active={active}
                     setActive={setActive}
                 />
             </div>
 
-            <h1 style={styles.title}>
+            <h1 className={"blackboard-title"}>
                 Ming Liu
                 <span style={{ transform: "scale(1.5,1)", color: "red", paddingLeft: 20, paddingRight: 20 }}> ♥ </span>
                 The Girl Who Codes
@@ -62,12 +66,12 @@ const BlackBoard = () => {
 export default BlackBoard;
 
 const styles = {
-    boardOn: {
-        top: 40,
-    },
-    boardOff: {
-        top: -600,
-    },
+    // boardOn: {
+    //     top: 40,
+    // },
+    // boardOff: {
+    //     top: -600,
+    // },
     title: {
         color: "white",
         width: "100%",
