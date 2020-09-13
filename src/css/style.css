@@ -564,21 +564,28 @@ body{
           padding: 5px 10px 4px;
           border: 1px solid grey;
           color: white;
-          width:122px; 
+          width:100%; 
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
-  
       }
   
       .form-btn.clear {
           background:orange;
+      }
+
+      .form-btn.clear:active {
+        background: red
       }
   
       .form-btn.send {
           background: green;
           border-radius:0;
       }    
+
+      .form-btn.send:active {
+        background: blue
+      }
   footer {
           position:fixed;
           bottom:0;
@@ -994,7 +1001,7 @@ body{
           padding: 5px 10px 4px;
           border: 1px solid grey;
           color: white;
-          width:103px;
+          width:120px;
           border-radius:0;
       }
   
@@ -1004,6 +1011,7 @@ body{
   
       .form-btn.send {
           background: green;
+          margin-left: 10px;
   
       }
       #contact-form {
@@ -1018,9 +1026,9 @@ body{
           outline: none;
           /*color: white;*/
           padding: 5px 10px 3px;
-          margin-left:100px;
+          margin-left:90px;
           margin-top:0;
-          width:200px;
+          width:220px;
       }
   
       .field {
@@ -1029,18 +1037,19 @@ body{
   
       label {
           vertical-align: top;
-          width: 90px;
+          width: 80px;
           text-align: right;
           position: absolute;
           margin-top:6px;
       }
   
       textarea {
-          width:210px;
-          height:42px;
-          margin-left:100px;
+          width:230px;
+          height:72px;
+          margin-left:90px;
           margin-top:0;
           padding:5px;
+          outline: none;
       }
   
       footer {
