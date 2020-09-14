@@ -8,7 +8,6 @@ import DrawingBoard from './DrawingBoard';
 
 const UpperContainer = () => {
 
-
     return (
         <div className="upper-container">
             <BlackBoard />

@@ -5,7 +5,6 @@ import { faTimes, faEraser, faTrashAlt } from '@fortawesome/free-solid-svg-icons
 
 const DrawingBoard = () => {
 
-    // let board;
     const [isDrawing, setIsDrawing] = useState(false);
     const [pos, setPos] = useState({ x: 0, y: 0 })
     const [boardContext, setBoardContext] = useState(null)
@@ -71,8 +70,7 @@ const DrawingBoard = () => {
             <canvas
                 id="drawingBoard"
                 className={isActive ? "canvas_active" : "canvas_notActive"}
-                // style={{ position: "absolute", left: (isActive ? 60 : 30), top: (isActive ? 40 : 20), width: (isActive ? 398 : 198), height: (isActive ? 328 : 162) }}
-                // onLoad={e => initializeStarterCanvas(e)}
+
                 onMouseDown={e => {
                     if (isActive) {
                         handleMouseDown(e)
@@ -126,12 +124,7 @@ const DrawingBoard = () => {
                     ? <ColorPalette setInk={setInk} ink={ink} setIsEraser={setIsEraser} isEraser={isEraser} />
                     : null
             }
-            {/* <div
-                style={{ display: (isActive ? "flex" : "none"), borderLeft: "5px solid brown", justifyContent: "center", alignItems: "center", width: 35, height: 35, backgroundColor: "yellow", position: "absolute", right: 0, bottom: 200 }}
-                onClick={saveImg}
-            >
-                save
-            </div> */}
+
         </div>
     )
 }

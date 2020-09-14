@@ -11,10 +11,8 @@ const ProjectDetail = (props) => {
 
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 <div style={{ width: "100%", height: 250, overflow: "hidden", boxShadow: "1px 1px 5px #cccccc" }}>
-                    {/* <img src={projects[active - 1].img} style={{ width: "100%", opacity: 0.8 }} /> */}
                     <img src={project.img} style={{ width: "100%", opacity: 0.8 }} />
                 </div>
-                {/* <h1 style={{ fontFamily: "Montserrat", textTransform: "uppercase" }}>{projects[active - 1].boardDisplay}</h1> */}
                 <div style={{ width: "100%", position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 
                     <h1 style={{ fontFamily: "Montserrat", textTransform: "uppercase" }}>{project.boardDisplay}</h1>
@@ -24,8 +22,7 @@ const ProjectDetail = (props) => {
 
                     <div style={{ display: "flex", padding: "30px 25px 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
                         {
-                            // projects[active - 1].tech.map((item, index) => {
-                            //     if (index < projects[active - 1].tech.length - 1) {
+
                             project.tech.map((item, index) => {
                                 if (index < project.tech.length - 1) {
                                     return <span>{item}<span style={styles.spanDiamond}>&diams; </span> </span>
@@ -35,7 +32,6 @@ const ProjectDetail = (props) => {
                             })
                         }
                         <div style={{ display: "flex", padding: "30px 25px 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
-                            {/* {projects[active - 1].description} */}
                             {project.description}
                         </div>
                     </div>

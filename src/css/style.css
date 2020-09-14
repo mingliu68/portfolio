@@ -28,8 +28,7 @@ body{
         align-items: center;
         transition-duration: 1s;
         z-index: 25;
-        /* width: 80%;
-        min-width: 550px; */
+
         flex-direction: column;
     }
 
@@ -60,12 +59,10 @@ body{
       width: 60px; 
       position: absolute;
       bottom: -80px;
-      /* top: 0; */
       right: 0;
       cursor: pointer;
       display: flex; 
       flex-direction: column;
-      /* z-index: 25; */
     }
 
     @media screen and (max-width:550px) {
@@ -98,7 +95,6 @@ body{
       .upper-container .blackboard .project-container .project {
       border-top-width: 20px;
       border-style: solid; 
-      /* position: absolute; */
       height: auto;
       width: 90%;
       background-color: white;
@@ -143,19 +139,11 @@ body{
       transform: translateZ(0)
     }
 
-  /* .upper-container .blackboard .project-container .projectBoard.boardActive {
-    display: none;
-  }
-
-  .upper-container .blackboard .project-container .projectBoard.boardNotActive {
-    display: none
-  } */
 
   .desk {
         width: 100%; 
         height: 25vh; 
-        /* position:absolute; 
-        bottom: 0;  */
+
         position: fixed;
         bottom: 60px;
         z-index:0; 
@@ -378,7 +366,6 @@ body{
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:21s;
-        /* margin-top:40px; */
       }
   
       p:nth-child(8){
@@ -519,7 +506,6 @@ body{
   .modal-inner {
           margin:15px 25px;
           height:390px;
-          /*left:10px;*/
           position:absolute;
           overflow-y:auto;
           overflow-x:hidden;
@@ -652,22 +638,13 @@ body{
   @media screen and (min-width:551px) {
       .msg {
         padding: 0 10px;
-        /* position: absolute; */
         width: 400px;
         height: 300px;
       }
   
       .msg p {
-        /* color: white;  */
         font-size: 19px;
-        /* margin: 10px 0 0 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 100%;
-        animation: type 4s steps(120, end); 
-        text-align: left;
-        font-weight: 600;
-        line-height: 1.1; */
+        
         }
   
       .msg p:nth-child(2){
@@ -706,7 +683,6 @@ body{
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:20s;
-        /* margin-top:40px; */
       }
   
       .msg p:nth-child(8){
@@ -755,46 +731,16 @@ body{
       .pc_frame {
         width:420px;
         height:300px;
-        /* height: 280px; */
         margin:150px 50px 170px;
-        /* position:absolute;
-        overflow:hidden; */
+
       }
   
       .container {
-        /* position:absolute;
-        top:55%;
-        left:50%;
-        transform:translate(-50%, -50%); */
+
         width:500px;
         height:610px;
       }
-  
-      /* .girl_box {
-        position:absolute;
-        margin-left:-180px;
-        margin-top:60px;
-        animation-duration:17s;
-        animation-name: slidein1;
-      } */
-  
-      /* .beagle1_box {
-        position:absolute;
-        margin-left:-180px;
-        margin-top:100px;
-        animation-duration:18s;
-        animation-name: slidein2;
-        animation-delay:2s;
-      }
-   */
-      /* .beagle2_box {
-        position:absolute;
-        margin-left:-180px;
-        margin-top:90px;
-        animation-duration:17s;
-        animation-name: slidein3;
-        animation-delay:4s;
-      } */
+
   
       @keyframes slidein1 {
         from {
@@ -828,31 +774,7 @@ body{
           width: 100%;
         }
       }
-      /* #girl {
-        position: absolute;
-        animation: x 0.5s infinite;
-        -webkit-animation: x 0.5s infinite;
-        -moz-animation: x 0.5s infinite;
-        -o-animation: x 0.5s infinite;
-      } */
-  
-      /* #beagle {
-        position: absolute;
-        animation: y 0.35s infinite;
-        -webkit-animation: y 0.35s infinite;
-        -moz-animation: y 0.35s infinite;
-        -o-animation: y 0.35s infinite;
-  
-      } */
-  
-      /* #beagle2{
-        position: absolute;
-  
-        animation: z .4s infinite;
-        -webkit-animation: z .4s infinite;
-        -moz-animation: z .4s infinite;
-        -o-animation: z .4s infinite;
-      } */
+
   
       @keyframes x {
       0%, 50%{ 
@@ -990,7 +912,6 @@ body{
       .modal-inner {
           margin:15px 25px;
           height:180px;
-          /*left:10px;*/
           position:absolute;
           overflow-y:auto;
           overflow-x:hidden;
@@ -1021,10 +942,8 @@ body{
       input {
           font-family: "lucida console",monaco, monospace;
           font-size: 15px;
-          /*background: #666;*/
           border: 1px solid grey;
           outline: none;
-          /*color: white;*/
           padding: 5px 10px 3px;
           margin-left:90px;
           margin-top:0;
@@ -1062,12 +981,10 @@ body{
   
       .modal-container {
           top: calc(50% + 10px);
-          /* position:absolute;
-          left:50%; */
+
       }
 
       .upper-container {
-          /* position:relative; */
           height:calc(100vh - 60px);
       }
 
@@ -1075,26 +992,13 @@ body{
         top: 40px;
       }
 
-      /* .upper-container .boardOff {
-        top: -600px;
-      } */
 
       .upper-container .blackboard {
         height: 650px;
-        /* position: absolute; */
-        /* left: 50%; */
-        /* transform: translate(-50%, 0); */
-        /* background-color: #686e51; */
-        /* border: 20px solid #541717; */
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* transition-duration: 1s; */
-        /* z-index: 25; */
+
         width: 80%;
         max-width: 800px;
         min-width: 550px;
-        /* flex-direction: column; */
     }
 
     .upper-container .blackboard.boardOn {
@@ -1106,50 +1010,21 @@ body{
     }
 
     .upper-container .blackboard-title {
-        /* color: white;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 5px solid white;
-        margin-bottom: 0;
-        padding-bottom: 0.5em; */
+
         font-size: 28px;
         height: 32px;
     }
 
-      /* .upper-container .blackboard .pulltag-container {
-        height: 60px;
-        width: 60px; 
-        position: absolute;
-        bottom: -80px;
-        right: 0;
-        cursor: pointer;
-        display: flex; 
-        flex-direction: column
-      } */
       .upper-container .blackboard.boardOn .pulltag-container {
         bottom: -80px;
       }
       
 
       .upper-container .blackboard .project-container {
-        /* position: relative; */
         height: 580px;
-        /* width: 100%;  */
         padding-top: 30px; 
-        /* background-color: rgb(23 84 23);
-        display: flex; 
-        flex-direction: row;
-        flex-wrap: wrap; 
-        justify-content: center; 
-        align-items: flex-start;
-        box-sizing: border-box;  */
+
         overflow: hidden;
-        /* border: 10px solid #1d401d;
-        border-top-color: #002b00;
-        border-bottom-color: #215f21 */
 
       }
 
@@ -1384,9 +1259,7 @@ body{
         z-index: 15; 
         position: absolute;
         left: 50%; 
-        /* top:200px; */
         top: 50%;
-        /* transform: translate(-50%, 0); */
         transform: translate(-50%, -50%);
         width: 620px;
         height: 500px;

@@ -33,13 +33,9 @@ const WallArt = (props) => {
         }
 
         if ((pos.left + width > pc.left && pos.left < pc.right) && (pos.top + height > pc.top - 150 && pos.top < pc.bottom + 150)) {
-
             setPos({ ...pos, left: origPos.left, top: origPos.top })
         }
-        // console.log("leftPos : ", leftPos,
-        //     "PcLeft : ", pc.left, "PcRight : ", pc.right,
-        //     "topPos : ", topPos,
-        //     "PcTop : ", pc.top, "PcBottom : ", pc.bottom)
+
         setMouseDown(false)
         setMove(false)
         setOrigPos(undefined)

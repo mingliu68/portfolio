@@ -22,7 +22,6 @@ const Footer = () => {
                             : null
                 }
 
-
                 <span> Built in NY with </span>
                 <span className="heart">♥</span>
                 <span> and React</span>
