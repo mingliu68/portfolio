@@ -28,9 +28,9 @@ const ProjectBox = (props) => {
                         {
                             project.tech.map((item, index) => {
                                 if (index < project.tech.length - 1) {
-                                    return <span>{item}<span style={styles.spanDiamond}>&diams; </span> </span>
+                                    return <span key={index}>{item}<span style={styles.spanDiamond}>&diams; </span> </span>
                                 } else {
-                                    return <span>{item}</span>
+                                    return <span key={index}>{item}</span>
                                 }
                             })
                         }

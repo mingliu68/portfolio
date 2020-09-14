@@ -11,6 +11,7 @@ const ColorPalette = (props) => {
                 colors.map((color, index) => {
                     return (
                         <div
+                            key={index}
                             style={{ width: 40, height: (isEraser === true ? 20 : ink === color ? 30 : 20), marginRight: (index < colors.length - 1 ? 10 : 0), backgroundColor: color }}
                             onClick={() => { setInk(color); setIsEraser(false) }}
                         />

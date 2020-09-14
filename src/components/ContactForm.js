@@ -18,13 +18,15 @@ const ContactForm = () => {
             message: message
         }
 
-        axios.post('API_URI', data)
+        axios
+            .post('https://ml-portfolio-api.herokuapp.com/api/sendgrid', data)
             .then(res => {
+                console.log(res)
                 setSent(true)
                 resetForm();
             })
-            .catch(() => {
-                console.log("message not sent")
+            .catch(error => {
+                console.log(error)
             })
     }
 
