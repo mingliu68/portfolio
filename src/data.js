@@ -122,7 +122,7 @@ export const projects = [
         name: "Personal Portfolio",
         boardDisplay: "Personal Portfolio",
         display: "Personal Portfolio - React App",
-        tech: ["React", "JavaScript", "HTML5", "CSS3"],
+        tech: ["React", "JavaScript", "HTML5", "CSS3", "Node.JS", "SendGrid"],
         img: "/img/mingliuPortfolio_home.png",
         description: "This is a fun side project turned into a personal portfolio",
         link: "https://mingliu.dev",
