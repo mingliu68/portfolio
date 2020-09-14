@@ -77,7 +77,7 @@ body{
       position: relative;
       height: 100%;
       width: 100%; 
-      padding-top: 20px; 
+      padding: 5% 5% 3%;
       background-color: rgb(23 84 23);
       display: flex; 
       flex-direction: row;
@@ -86,9 +86,7 @@ body{
       align-items: flex-start;
       box-sizing: border-box; 
       overflow: hidden;
-      border: 10px solid #1d401d;
-      border-top-color: #002b00;
-      border-bottom-color: #215f21;
+
       overflow-y: auto;
     }
     @media screen and (max-width:550px) {
@@ -96,7 +94,7 @@ body{
       border-top-width: 20px;
       border-style: solid; 
       height: auto;
-      width: 90%;
+      /* width: 90%; */
       background-color: white;
       padding: 10px;
       display: flex;
@@ -114,13 +112,20 @@ body{
       .upper-container .blackboard .project-container .projectBoard {
         display: none;
       }
-      .upper-container .blackboard .project-container .project .project-mobile.mobileActive {
+      .upper-container .blackboard .project-container .project .project-mobile {
         display: block;
+        transition-duration: 0.3s;
+        overflow: hidden;
+        display: block
+      }
+
+
+      .upper-container .blackboard .project-container .project .project-mobile.mobileActive {
+        height: auto;
       }
       .upper-container .blackboard .project-container .project .project-mobile.mobileNotActive {
-        display: none;
+        height: 0;
       }
-    
     
     
     }
@@ -1025,6 +1030,9 @@ body{
         padding-top: 30px; 
 
         overflow: hidden;
+        border: 10px solid #1d401d;
+        border-top-color: #002b00;
+        border-bottom-color: #215f21;
 
       }
 
