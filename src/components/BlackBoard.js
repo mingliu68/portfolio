@@ -5,7 +5,8 @@ import { project_position, projects } from '../data';
 import ProjectBox from './ProjectBox';
 import ProjectBoard from './ProjectBoard';
 
-const BlackBoard = () => {
+const BlackBoard = (props) => {
+    const { modalOn } = { ...props }
     const [status, setStatus] = useState(false);
     const [mouseOver, setMouseOver] = useState(projects.length);
     const [enlarge, setEnlarge] = useState(0)

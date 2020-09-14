@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UpperContainer from '../components/UpperContainer';
 import ModalContainer from '../components/ModalContainer';
 import Footer from '../components/Footer';
@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 // export const ModalContext = createContext()
 
 const Main = () => {
-
     return (
         <>
             <UpperContainer />
