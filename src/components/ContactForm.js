@@ -26,6 +26,7 @@ const ContactForm = () => {
                 resetForm();
             })
             .catch(error => {
+                setButtonText("Failed")
                 console.log(error)
             })
     }
