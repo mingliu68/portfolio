@@ -70,7 +70,7 @@ export const projects = [
     {
         name: "Sarama Animal Rescue",
         display: "Sarama Rescue - WordPress Site",
-        boardDisplay: "Sarama Animal Rescue",
+        boardDisplay: "Sarama Rescue",
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "WordPress", "WooCommerce", "JQuery"],
         img: "/img/sarama_home.png",
         description: "",

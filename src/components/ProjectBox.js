@@ -20,7 +20,7 @@ const ProjectBox = (props) => {
                 onMouseLeave={() => setEnlarge(0)}
                 onClick={() => setActive(index + 1)}
             >
-                <img src={project.img} style={{ opacity: (mouseOver === index + 1 ? 1 : 0.65) }} alt={"Project - " + project.display} />
+                <img src={project.img} className={mouseOver === index + 1 ? "opacity_100" : "opacity_65"} alt={"Project - " + project.display} />
                 <div style={{ paddingTop: 15, color: (mouseOver === index + 1 ? "#333" : "#ccc") }}>{project.display}
                     <div
                         className={active === index + 1 ? "project-mobile mobileActive" : "project-mobile mobileNotActive"}

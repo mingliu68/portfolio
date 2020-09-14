@@ -1264,6 +1264,14 @@ body{
         width: 620px;
         height: 500px;
       }
+
+      .opacity_100 {
+        opacity: 1
+      }
+    
+      .opacity_65 {
+        opacity: 0.65
+      }
   }
 
 
