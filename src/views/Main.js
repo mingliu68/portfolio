@@ -7,15 +7,7 @@ import Footer from '../components/Footer';
 
 const Main = () => {
 
-    // const windowSz = {width: window.innerWidth, height: window.innerHeight}
-    // const showWarning = () => {
-    //     if (windowSz.width > 551 && windowSz.width < 800 )
-    // }
-
     return (
-        // {
-
-        // }
         <>
             <UpperContainer />
             <ModalContainer />

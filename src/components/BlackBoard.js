@@ -12,7 +12,6 @@ const BlackBoard = () => {
     const [active, setActive] = useState(0)
 
     return (
-        // <div className="blackboard" style={status ? styles.boardOn : styles.boardOff}>
         <div className={status ? "blackboard boardOn" : "blackboard boardOff"} >
             <div
                 className="pulltag-container"

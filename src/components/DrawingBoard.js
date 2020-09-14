@@ -67,7 +67,6 @@ const DrawingBoard = () => {
     }, [])
 
     return (
-        // <div style={{ zIndex: (isActive ? 25 : 1), position: "absolute", left: "50%", top: (isActive ? 200 : 350), transform: (isActive ? "translate(-50%, 0)" : "translate(250px, 0)"), width: (isActive ? 520 : 260), height: (isActive ? 420 : 210) }}>
         <div className={isActive ? "drawingBoard_lg-container" : "drawingBoard-container"} >
             <canvas
                 id="drawingBoard"
