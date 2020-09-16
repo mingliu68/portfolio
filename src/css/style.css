@@ -116,12 +116,16 @@ body{
         display: block;
         transition-duration: 0.3s;
         overflow: hidden;
-        display: block
+        display: block;
+        font-size: 14px;
+        
       }
 
 
       .upper-container .blackboard .project-container .project .project-mobile.mobileActive {
         height: auto;
+        font-family: "source sans pro";
+        padding-top: 10px;
       }
       .upper-container .blackboard .project-container .project .project-mobile.mobileNotActive {
         height: 0;

@@ -16,11 +16,12 @@ const ProjectDetail = (props) => {
                 <div style={{ width: "100%", position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 
                     <h1 style={{ fontFamily: "Montserrat", textTransform: "uppercase" }}>{project.boardDisplay}</h1>
+                    {/* <div style={{ fontFamily: "source sans pro", fontSize: 16, fontWeight: 400 }}>{project.description}</div> */}
                     <div style={{ height: 0, width: 300, border: "2px solid #333333", display: "flex", justifyContent: "center", alignItems: "center", margin: "0 10px" }}>
                         <FontAwesomeIcon icon={faStar} size="2x" style={{ backgroundColor: "white", padding: "0 10px", fontSize: 24 }} />
                     </div>
 
-                    <div style={{ display: "flex", padding: "30px 25px 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
+                    <div style={{ display: "flex", padding: "25px 5% 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center", fontFamily: "source sans pro", fontSize: 14 }}>
                         {
 
                             project.tech.map((item, index) => {
@@ -31,8 +32,30 @@ const ProjectDetail = (props) => {
                                 }
                             })
                         }
-                        <div style={{ display: "flex", padding: "30px 25px 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
+                        {/* <div style={{ display: "flex", padding: "30px 25px 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
                             {project.description}
+                        </div> */}
+
+                    </div>
+                    <div style={{ width: "100%", display: "flex", justifyContent: "space-evenly", fontFamily: "source sans pro", fontSize: 15, lineHeight: 1.3 }}>
+                        <div style={{ width: "45%", display: "inline-block", float: "left", textAlign: "right" }}>
+
+                            <div style={{ fontWeight: 600 }}><span style={{ backgroundImage: "linear-gradient(0deg, #daebd4 50%, transparent 50%)" }}>{project.role[0]}</span></div>
+                            <div style={{ marginBottom: 10, fontSize: 13, textTransform: "lowercase" }}>{project.role[1]}</div>
+                            {project.description}
+                        </div>
+                        <div style={{ width: "45%", display: "inline-block", float: "right", textAlign: "left" }}>
+                            <ul style={{ margin: 0, paddingInlineStart: 20 }}>
+                                {
+                                    project.techDescription.map((tech, index) => {
+                                        return (
+                                            <li key={index}>
+                                                {tech}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
                         </div>
                     </div>
                     <div style={{ position: "absolute", right: 0, top: 0, display: "flex", justifyContent: "flex-end", alignItems: "flex-end", padding: "10px 20px" }}>
@@ -64,9 +87,9 @@ export default ProjectDetail;
 
 const styles = {
     spanDiamond: {
-        marginLeft: 10,
-        marginRight: 10,
-        fontSize: 10,
+        marginLeft: 7,
+        marginRight: 7,
+        fontSize: 9,
         animation: "none",
     }
 }
