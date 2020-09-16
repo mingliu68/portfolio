@@ -1,6 +1,7 @@
 /* 
     Author     : Ming Liu
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro&display=swap');
 
 body{
     background:lightblue;
@@ -120,7 +121,7 @@ body{
 
       .upper-container .blackboard .project-container .project .project-mobile.mobileActive {
         height: auto;
-        font-family: "source sans pro";
+        font-family: "Source Sans Pro, sans-serif";
         padding-top: 10px;
       }
       .upper-container .blackboard .project-container .project .project-mobile.mobileNotActive {

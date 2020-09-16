@@ -15,7 +15,7 @@ const ProjectDetail = (props) => {
                 </div>
                 <div style={{ width: "100%", position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 
-                    <h1 style={{ fontFamily: "Montserrat", textTransform: "uppercase" }}>{project.boardDisplay}</h1>
+                    <h1 style={{ fontFamily: "Montserrat, sans-serif", textTransform: "uppercase" }}>{project.boardDisplay}</h1>
                     {/* <div style={{ fontFamily: "source sans pro", fontSize: 16, fontWeight: 400 }}>{project.description}</div> */}
                     <div style={{ height: 0, width: 300, border: "2px solid #333333", display: "flex", justifyContent: "center", alignItems: "center", margin: "0 10px" }}>
                         <FontAwesomeIcon icon={faStar} size="2x" style={{ backgroundColor: "white", padding: "0 10px", fontSize: 24 }} />
