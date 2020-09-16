@@ -155,7 +155,7 @@ export const projects = [
         role: ["Full Stack Engineer", "SOLO DEVELOPER"],
         link: "https://mingliu.dev",
         github: "https://github.com/mingliu68/portfolio",
-        description: "A fun side project that turned into my personal portfolio. ",
+        description: "A fun side project that turned into my personal portfolio. Always a work-in-progress",
         techDescription: ["React w/ Hooks fronend with CSS animation and draggable components",
             "Integrate canvas for blackboard drawing.",
             "Express.js backend for SendGrid integration",
