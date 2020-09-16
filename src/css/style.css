@@ -121,7 +121,7 @@ body{
 
       .upper-container .blackboard .project-container .project .project-mobile.mobileActive {
         height: auto;
-        font-family: "Source Sans Pro, sans-serif";
+        font-family: "Source Sans Pro", sans-serif;
         padding-top: 10px;
       }
       .upper-container .blackboard .project-container .project .project-mobile.mobileNotActive {
@@ -518,7 +518,7 @@ body{
   }
 
   .modal-description {
-    line-height: 1.3;
+    line-height: 1.2;
     text-align: left;
   }
 
@@ -984,7 +984,7 @@ body{
   
       textarea {
           width:230px;
-          height:72px;
+          height:70px;
           margin-left:90px;
           margin-top:0;
           padding:5px;
