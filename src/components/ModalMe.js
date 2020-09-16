@@ -11,10 +11,13 @@ const ModalMe = () => {
             </div>
             <div className="modal-inner scroller">
                 <div style={{ lineHeight: 1.2, textAlign: "left" }}>
-                    Hi, I am the girl chased by the two beagles and the brain behind Beagle Bits.
+                    Lover of shoes and dogs, hater of deadlines. Holistic nut, herbal fanatic, but constantly craving junk food, which also leads to her expertise in yo-yo diet.
+
+                    Slogan: If you put your mind to it, you can accomplish anything!
+                    {/* Hi, I am the girl chased by the two beagles and the brain behind Beagle Bits.
                     I am a full stack web developer and iOS mobile developer.
                     I have been building websites since 2003 and it has always been a passion of mine.
-                    If you are interested in having me building your dream site, contact me via the contact form and let's get to work!
+                    If you are interested in having me building your dream site, contact me via the contact form and let's get to work! */}
                 </div>
             </div>
         </div>

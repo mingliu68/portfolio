@@ -198,7 +198,7 @@ export const wallart = [
     {
         name: "resume",
         type: "social",
-        link: "https://google.com",
+        link: "/pdf/ming_liu_resume.pdf",
         top: 460,
         left: "50%",
         transform: "translate(-400px, 0)",
