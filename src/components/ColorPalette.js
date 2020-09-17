@@ -5,7 +5,7 @@ const ColorPalette = (props) => {
     const { setInk, ink, setIsEraser, isEraser } = { ...props }
     return (
         <div
-            style={{ display: "flex", alignItems: "flex-end", width: 290, height: 20, position: "absolute", left: 60, bottom: 30 }}
+            style={styles.container}
         >
             {
                 colors.map((color, index) => {
@@ -24,3 +24,15 @@ const ColorPalette = (props) => {
 }
 
 export default ColorPalette;
+
+const styles = {
+    container: {
+        display: "flex",
+        alignItems: "flex-end",
+        width: 290,
+        height: 20,
+        position: "absolute",
+        left: 60,
+        bottom: 30
+    }
+}

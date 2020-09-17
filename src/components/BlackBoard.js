@@ -56,7 +56,7 @@ const BlackBoard = () => {
 
             <h1 className={"blackboard-title"}>
                 Ming Liu
-                <span style={{ transform: "scale(1.5,1)", color: "red", paddingLeft: 20, paddingRight: 20 }}> ♥ </span>
+                <span style={styles.titleHeart}> ♥ </span>
                 The Girl Who Codes
             </h1>
         </div>
@@ -81,6 +81,12 @@ const styles = {
         paddingBottom: "0.5em",
         fontSize: 28,
         height: 32,
+    },
+    titleHeart: {
+        transform: "scale(1.5,1)",
+        color: "red",
+        paddingLeft: 20,
+        paddingRight: 20
     },
     arrow: {
         position: "absolute",
