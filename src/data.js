@@ -75,6 +75,7 @@ export const projects = [
         img: "/img/sarama_home.png",
         role: ["Full Stack Engineer", "SOLO DEVELOPER"],
         link: "https://sarama.org",
+        year: "2018",
         github: "",
         description: "A custom WordPress site for Sarama Animal Rescue with rescue management app and eCommerce integration.",
         techDescription: ["WordPress theme development.",
@@ -93,8 +94,10 @@ export const projects = [
         img: "/img/pawsnfind_home.png",
         role: ["Full Stack Engineer", "One of seven developers"],
         link: "https://pawsnfind.com",
+        year: "2019",
+
         github: "https://github.com/Pawsnfind",
-        description: "Pawsnfind is a web app that connects rescues and adopters while helping rescues effortlessly manageing their operation.",
+        description: "Pawsnfind is a web app that connects rescues and adopters while helping rescues manageing their operation.",
         techDescription: ["React FE w/ Redux.",
             "Database schema design",
             "Role based user dashboards",
@@ -109,6 +112,8 @@ export const projects = [
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "WordPress", "JQuery"],
         img: "/img/brooksidemedia_home.png",
         link: "https://brooksidemediaco.com",
+        year: "2018",
+
         github: "",
         role: ["Full Stack Engineer", "SOLO DEVELOPER"],
         description: "A custom WordPress site for Brookside Media & Co.",
@@ -126,6 +131,8 @@ export const projects = [
         img: "/img/skinDecoded_home.png",
         role: ["Frontend Engineer", "Solo Developer"],
         link: "https://web.archive.org/web/20141222211511/http://www.skindecoded.com/",
+        year: "2011",
+
         github: "",
         description: "",
         techDescription: ["PrestaShop theme development.",
@@ -140,6 +147,8 @@ export const projects = [
         img: "/img/peachLemon_home.png",
         role: ["Frontend Engineer", "Solo Developer"],
         link: "",
+        year: "2012",
+
         github: "",
         description: "",
         techDescription: ["PrestaShop theme development.",
@@ -153,7 +162,9 @@ export const projects = [
         tech: ["React", "JavaScript", "HTML5", "CSS3", "Node.JS", "Express", "SendGrid"],
         img: "/img/mingliuPortfolio_home.png",
         role: ["Full Stack Engineer", "SOLO DEVELOPER"],
-        link: "https://mingliu.dev",
+        link: "",
+        year: "2020",
+
         github: "https://github.com/mingliu68/portfolio",
         description: "A fun side project that turned into my personal portfolio. Always a work-in-progress",
         techDescription: ["React w/ Hooks fronend with CSS animation and draggable components",

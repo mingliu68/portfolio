@@ -15,13 +15,14 @@ const ProjectDetail = (props) => {
                 </div>
                 <div style={{ width: "100%", position: "relative", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 
-                    <h1 style={{ fontFamily: "Montserrat, sans-serif", textTransform: "uppercase" }}>{project.boardDisplay}</h1>
+                    <h1 style={{ fontFamily: "Montserrat, sans-serif", textTransform: "uppercase", marginBottom: 0 }}>{project.boardDisplay}</h1>
+                    <div style={{ marginBottom: 22, fontSize: 14, textTransform: "lowercase", fontWeight: "bold" }}>- {project.year} -</div>
                     {/* <div style={{ fontFamily: "source sans pro", fontSize: 16, fontWeight: 400 }}>{project.description}</div> */}
                     <div style={{ height: 0, width: 300, border: "2px solid #333333", display: "flex", justifyContent: "center", alignItems: "center", margin: "0 10px" }}>
                         <FontAwesomeIcon icon={faStar} size="2x" style={{ backgroundColor: "white", padding: "0 10px", fontSize: 24 }} />
                     </div>
 
-                    <div style={{ display: "flex", padding: "25px 5% 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center", fontFamily: "source sans pro", fontSize: 14 }}>
+                    <div style={{ display: "flex", padding: "22px 5% 15px", flexWrap: "wrap", justifyContent: "center", alignItems: "center", fontFamily: "source sans pro", fontSize: 14 }}>
                         {
 
                             project.tech.map((item, index) => {
@@ -58,18 +59,18 @@ const ProjectDetail = (props) => {
                             </ul>
                         </div>
                     </div>
-                    <div style={{ position: "absolute", right: 0, top: 0, display: "flex", justifyContent: "flex-end", alignItems: "flex-end", padding: "10px 20px" }}>
+                    <div style={{ position: "absolute", right: 0, top: 0, display: "flex", justifyContent: "flex-end", alignItems: "flex-end", padding: "15px 15px 0 0", width: "100%" }}>
                         {
                             project.github
-                                ? <a href={project.github} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: 5 }}>
-                                    <img src="/img/github_bw.png" style={{ width: 40, height: 40 }} />
+                                ? <a href={project.github} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: 5, width: "8%", height: "8%", maxWidth: 50, maxHeight: 50 }}>
+                                    <img src="/img/github_bw.png" style={{ width: "100%", height: "100%" }} />
                                 </a>
                                 : null
                         }
                         {
                             project.link
-                                ? <a href={project.link} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: 5 }}>
-                                    <img src="/img/web_bw.png" style={{ width: 40, height: 40 }} />
+                                ? <a href={project.link} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: 5, width: "8%", height: "8%", maxWidth: 50, maxHeight: 50 }}>
+                                    <img src="/img/web_bw.png" style={{ width: "100%", height: "100%" }} />
                                 </a>
                                 : null
                         }

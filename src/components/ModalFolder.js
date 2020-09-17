@@ -9,7 +9,7 @@ const ModalFolder = () => {
                 <button type="button" className="close modal-header-botton" data-dismiss="modal" />
             </div>
             <div className="modal-inner">
-                What should I put in here?
+                Something Interesting Coming Soon...
             </div>
         </div>
     )
