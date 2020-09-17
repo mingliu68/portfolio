@@ -7,9 +7,9 @@ const ProjectBoard = (props) => {
     const { active, setActive, project } = { ...props }
 
     return (
-        <div className={active ? "projectBoard boardActive" : "projectBoard"}   >
-            <div className="closeButton">
-                <FontAwesomeIcon icon={faTimes} size="1x" style={{ cursor: "pointer" }} onClick={() => setActive(0)} />
+        <div className={active ? "projectBoard boardActive" : "projectBoard"} >
+            <div className="closeButton" onClick={() => setActive(0)} style={{ cursor: "pointer" }}  >
+                <FontAwesomeIcon icon={faTimes} size="1x" />
             </div>
             <ProjectDetail project={project} />
         </div>
