@@ -4,25 +4,32 @@ const Dial = (props) => {
     const { hour, min, type } = { ...props }
 
     let setup = {};
+
     (() => {
-        if (type === "second") {
-            setup = {
-                temp: -90,
-                intervalTime: 1000,
-                intervalRotate: 6
-            }
-        } else if (type === "minute") {
-            setup = {
-                temp: -90 + (6 * min),
-                intervalTime: 60000,
-                intervalRotate: 6
-            }
-        } else if (type === "hour") {
-            setup = {
-                temp: -90 + (30 * hour) + (Math.floor(min / 10) * 5),
-                intervalTime: 600000,
-                intervalRotate: 5
-            }
+        switch (type) {
+            case "second":
+                setup = {
+                    temp: -90,
+                    intervalTime: 1000,
+                    intervalRotate: 6
+                }
+                return;
+            case "minute":
+                setup = {
+                    temp: -90 + (6 * min),
+                    intervalTime: 60000,
+                    intervalRotate: 6
+                }
+                return;
+            case "hour":
+                setup = {
+                    temp: -90 + (30 * hour) + (Math.floor(min / 10) * 5),
+                    intervalTime: 600000,
+                    intervalRotate: 5
+                }
+                return;
+            default:
+                return;
         }
     })()
 
