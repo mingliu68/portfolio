@@ -114,7 +114,7 @@ const DrawingBoard = () => {
 
             </div>
             <div
-                style={{ display: (isActive ? "flex" : "none"), borderLeft: "5px solid brown", justifyContent: "center", alignItems: "center", width: 35, height: 35, backgroundColor: "yellow", position: "absolute", right: 0, bottom: 100 }}
+                style={{ display: (isActive ? "flex" : "none"), borderLeft: "5px solid brown", justifyContent: "center", alignItems: "center", width: 35, height: 35, backgroundColor: "yellow", position: "absolute", right: 0, bottom: 100, cursor: "pointer" }}
                 onClick={() => setIsActive(false)}
             >
                 <FontAwesomeIcon icon={faTimes} size="2x" />

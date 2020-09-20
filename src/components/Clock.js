@@ -13,7 +13,7 @@ const Clock = () => {
     const [transformPos, setTransformPos] = useState("translate(305px, 0)")
     const [mouseDown, setMouseDown] = useState(false);
     const [move, setMove] = useState(false);
-    const [pc, setPc] = useState(undefined)
+    const [pc, setPc] = useState(undefined);
 
     const handleMouseDown = (e) => {
         e.preventDefault();
@@ -63,7 +63,7 @@ const Clock = () => {
                 top: pos.top,
                 left: pos.left,
                 transform: transformPos,
-                cursor: "pointer",
+                cursor: (move ? "grabbing" : "grab"),
                 zIndex: (mouseDown ? 15 : 0),
             }}
             onMouseDown={e => handleMouseDown(e)}

@@ -69,7 +69,7 @@ const WallArt = (props) => {
             onMouseMove={e => mouseDrag(e)}
             onMouseUp={e => closeMouseDragEvent(e)}
         >
-            <div style={{ cursor: "pointer", width: (width + 10), height: (height + 10) }} />
+            <div style={{ cursor: (move ? "grabbing" : mouseDown ? "grab" : "pointer"), width: (width + 10), height: (height + 10) }} />
         </div>
     )
 }

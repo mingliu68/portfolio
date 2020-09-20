@@ -1283,6 +1283,7 @@ body{
         transform: translate(250px, 0);
         width: 260px;
         height: 210px;
+        cursor: pointer;
       }
 
       .drawingBoard_lg-container {
