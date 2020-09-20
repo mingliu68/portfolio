@@ -17,6 +17,7 @@ const Clock = () => {
 
     const handleMouseDown = (e) => {
         e.preventDefault();
+        setPcBounding();
         const rect = e.target.getBoundingClientRect()
         setMouseDown(true);
         setPos({ ...pos, left: rect.left, top: rect.top })
@@ -34,7 +35,8 @@ const Clock = () => {
     }
 
     const closeMouseDragEvent = (e) => {
-        if ((pos.left + width > pc.left && pos.left < pc.right) && (pos.top + height > pc.top - 150 && pos.top < pc.bottom + 150)) {
+
+        if ((move && pos.left + width > pc.left && pos.left < pc.right) && (pos.top + height > pc.top - 150 && pos.top < pc.bottom + 150)) {
             setPos({ ...pos, left: origPos.left, top: origPos.top })
         }
         setMouseDown(false)
@@ -47,11 +49,8 @@ const Clock = () => {
     }
 
     useEffect(() => {
-        setPc(document.querySelector('#pc_frame').getBoundingClientRect());
+        setPcBounding();
     }, [])
-
-    window.onresize = setPcBounding;
-
 
     return (
 

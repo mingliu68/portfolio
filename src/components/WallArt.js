@@ -11,6 +11,7 @@ const WallArt = (props) => {
 
     const handleMouseDown = (e) => {
         e.preventDefault();
+        setPcBounding();
         const rect = e.target.getBoundingClientRect()
         setMouseDown(true);
         setPos({ ...pos, left: rect.left, top: rect.top })
@@ -52,10 +53,8 @@ const WallArt = (props) => {
     }
 
     useEffect(() => {
-        setPc(document.querySelector('#pc_frame').getBoundingClientRect());
+        setPcBounding();
     }, [])
-
-    window.onresize = setPcBounding;
 
     return (
         <div
