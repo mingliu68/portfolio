@@ -35,11 +35,12 @@ const Dial = (props) => {
 
     const [dial, setDial] = useState(setup.temp)
 
+    function dialRotation() {
+        setup.temp = setup.temp + setup.intervalRotate === 270 ? -90 : setup.temp + setup.intervalRotate;
+        setDial(setup.temp)
+    }
+
     const startDial = () => {
-        function dialRotation() {
-            setup.temp = setup.temp + setup.intervalRotate === 270 ? -90 : setup.temp + setup.intervalRotate;
-            setDial(setup.temp)
-        }
         setInterval(dialRotation, setup.intervalTime)
     }
 

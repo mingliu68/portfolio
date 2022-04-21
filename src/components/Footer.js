@@ -10,9 +10,10 @@ const Footer = () => {
                 <span className="copyright">&copy;</span>
                 <span>{year} Ming Liu </span>
                 <span className="diamond">&diams;</span>
-                <span> hello</span>
+                {/* <span> hello</span>
                 <span className="at">@</span>
-                <span>mingliu.dev </span>
+                <span>mingliu.dev </span> */}
+                <span>mingliudev@gmail.com</span>
 
                 {
                     viewType === "mobile"

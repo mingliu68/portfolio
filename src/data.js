@@ -9,7 +9,7 @@ export const skillset = [
     },
     {
         cat: "Tools",
-        skills: ["PhotoShop", "Illustrator", "InDesign", "Blender 3D", "Adobe XD", "Figma"]
+        skills: ["PhotoShop", "Illustrator", "InDesign", "Blender 3D", "Adobe XD", "Figma", "Unity"]
     }
 ]
 
@@ -179,7 +179,7 @@ export const wallart = [
     {
         name: "twitter",
         type: "social",
-        link: "https://twitter.com/mingliu68",
+        link: "https://twitter.com/minaskye68",
         top: 100,
         left: "50%",
         transform: "translate(-400px, 0)",
@@ -189,7 +189,7 @@ export const wallart = [
     {
         name: "linkedin",
         type: "social",
-        link: "https://www.linkedin.com/in/mingliu68/",
+        link: "https://www.linkedin.com/in/minaskye68/",
         top: 220,
         left: "50%",
         transform: "translate(-400px, 0)",
