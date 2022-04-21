@@ -517,6 +517,9 @@ body{
           height: auto;
   }
 
+  .modal-inner ul {
+    padding-inline-start: 20px;
+  }
   .modal-inner ul li {
     text-align: left;
   }

@@ -13,7 +13,9 @@ const Footer = () => {
                 {/* <span> hello</span>
                 <span className="at">@</span>
                 <span>mingliu.dev </span> */}
-                <span> mingliudev@gmail.com </span>
+                <span> mingliudev</span>
+                <span className="at">@</span>
+                <span>gmail.com </span>
 
                 {
                     viewType === "mobile"
