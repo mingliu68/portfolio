@@ -39,16 +39,16 @@ const UpperContainer = () => {
                         </div>
 
                         <div className="icon-disk">
-                            <button className="button" type="button" data-toggle="modal" data-target="#disk" />
+                            <button title="Tech Skills" className="button" type="button" data-toggle="modal" data-target="#disk" />
                         </div>
                         <div className="icon-msg">
-                            <button className="button" type="button" data-toggle="modal" data-target="#contact" />
+                            <button title="Contact Me" className="button" type="button" data-toggle="modal" data-target="#contact" />
                         </div>
                         <div className="icon-folder">
-                            <button className="button" type="button" data-toggle="modal" data-target="#folder" />
+                            <button title="Certificates" className="button" type="button" data-toggle="modal" data-target="#folder" />
                         </div>
                         <div className="icon-about">
-                            <button className="button" type="button" data-toggle="modal" data-target="#about" />
+                            <button title="About Me" className="button" type="button" data-toggle="modal" data-target="#about" />
                         </div>
                     </div>
                 </div>
