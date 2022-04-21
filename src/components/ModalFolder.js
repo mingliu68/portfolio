@@ -9,7 +9,10 @@ const ModalFolder = () => {
                 <button type="button" className="close modal-header-botton" data-dismiss="modal" />
             </div>
             <div className="modal-inner">
-                <b>ServiceNow</b> Certified System Administrator (2022)
+                <ul>
+                    <li><b>ServiceNow</b> Certified System Administrator (2022)</li>
+                </ul>
+
             </div>
         </div>
     )

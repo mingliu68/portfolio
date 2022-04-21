@@ -517,6 +517,10 @@ body{
           height: auto;
   }
 
+  .modal-inner ul li {
+    text-align: left;
+  }
+
   .modal-description {
     line-height: 1.2;
     text-align: left;

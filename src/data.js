@@ -1,7 +1,7 @@
 export const skillset = [
     {
         cat: "Programming Language",
-        skills: ["JavaScript", "HTML5", "CSS3", "SQL", "Python", "PHP", "C#"]
+        skills: ["JavaScript", "HTML5", "CSS3", "SQL", "Python", "PHP", "C#", "AngularJS"]
     },
     {
         cat: "Frameworks / Libraries / CMS",
