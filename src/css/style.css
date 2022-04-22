@@ -1143,6 +1143,8 @@ body{
         transform: translateZ(0);
         transform: rotateZ(360deg);
         backface-visibility: hidden;
+        transition-duration: 1000ms;
+        transition-delay: 500ms;
       }
   
     .upper-container .blackboard .project-container .projectBoard.boardActive {
