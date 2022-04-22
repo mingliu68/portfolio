@@ -415,7 +415,7 @@ body{
   .icon-disk {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:28s;
+        animation-delay:/*28s*/10s;
         position:absolute;
         top:5px;
         right:160px;
@@ -424,7 +424,7 @@ body{
   .icon-msg {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:29s;
+        animation-delay:/*29s*/11s;
         position:absolute;
         top:5px;
         right:120px;
@@ -433,7 +433,7 @@ body{
   .icon-folder {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:30s;
+        animation-delay:/*30s*/12s;
         position:absolute;
         top:5px;
         right:80px;
@@ -442,7 +442,7 @@ body{
   .icon-about {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:31s;
+        animation-delay:/*31s*/13s;
         position:absolute;
         top:5px;
         right:40px;
@@ -470,7 +470,7 @@ body{
       }
   
       .button {
-        animation: btn1 0s ease-in 25s forwards;
+        animation: btn1 0s ease-in /*25s*/12s forwards;
         animation-fill-mode:forwards;
         width:0;
         height:0;
@@ -571,7 +571,8 @@ body{
           padding:5px 10px;
           border-radius:0;
   }
-  .form-btn {
+
+  .form-btn, .form-msg-btn {
           border-radius: 0;
           font-family: "Lucida Console",Monaco, Monospace;
           padding: 5px 10px 4px;
@@ -583,22 +584,27 @@ body{
           appearance: none;
       }
   
-      .form-btn.clear {
+      .form-btn.clear, .form-msg-btn.clear {
           background:orange;
       }
 
-      .form-btn.clear:active {
+      .form-msg-btn.send {
+        margin-bottom: 10px;
+      }
+
+      .form-btn.clear:active, .form-msg-btn.clear:active {
         background: red
       }
   
-      .form-btn.send {
+      .form-btn.send, .form-msg-btn.send {
           background: green;
           border-radius:0;
       }    
 
-      .form-btn.send:active {
+      .form-btn.send:active, .form-msg-btn.send:active {
         background: blue
       }
+
   footer {
           position:fixed;
           bottom:0;
@@ -833,7 +839,7 @@ body{
       .icon-disk {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:29s;
+        animation-delay:/*29s;*/10s;
         position:absolute;
         top:5px;
         right:245px;
@@ -845,7 +851,7 @@ body{
       .icon-msg {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:30s;
+        animation-delay:/*30s;*/11s;
         position:absolute;
         top:5px;
         right:185px;
@@ -857,7 +863,7 @@ body{
       .icon-folder {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:31s;
+        animation-delay:/*31s;*/12s;
         position:absolute;
         top:5px;
         right:125px;
@@ -869,7 +875,7 @@ body{
       .icon-about {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
-        animation-delay:32s;
+        animation-delay:/*32s;*/13s;
         position:absolute;
         top:5px;
         right:65px;
@@ -909,7 +915,7 @@ body{
       }
   
       .button {
-        animation: btn1 0s ease-in 25s forwards;
+        animation: btn1 0s ease-in /*25s*/12s forwards;
         animation-fill-mode:forwards;
         width:0;
         height:0;
@@ -943,7 +949,28 @@ body{
           overflow-y:auto;
           overflow-x:hidden;
       }
+
+      .form-msg-btn, .form-btn {
+        border-radius: 0;
+          font-family: "Lucida Console",Monaco, Monospace;
+          padding: 5px 10px 4px;
+          border: 1px solid grey;
+          color: white;
+          border-radius:0;
+      }
+
       .form-btn {
+        width: 120px;
+      }
+      .form-msg-btn.clear {
+        width: 35%;
+        margin-left: 3%;
+      }
+      .form-msg-btn.send {
+        width: 55%;
+        margin-right: 3%;
+      }
+      /* .form-btn {
           border-radius: 0;
           font-family: "Lucida Console",Monaco, Monospace;
           padding: 5px 10px 4px;
@@ -951,13 +978,13 @@ body{
           color: white;
           width:120px;
           border-radius:0;
-      }
+      } */
   
-      .form-btn.clear {
+      .form-btn.clear, .form-msg-btn.clear {
           background:orange;
       }
   
-      .form-btn.send {
+      .form-btn.send, .form-msg-btn.send {
           background: green;
           margin-left: 10px;
   
