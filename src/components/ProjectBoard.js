@@ -5,7 +5,6 @@ import ProjectDetail from './ProjectDetail';
 
 const ProjectBoard = (props) => {
     const { active, setActive, project } = { ...props }
-    // const [activeClass, setActiveClass] = useState(active !== 0 ? "projectBoard boardActive" : "projectBoard");
     const [delayStyle, setDelayStyle] = useState({});
 
     const delaySetActive = () => {
@@ -18,8 +17,6 @@ const ProjectBoard = (props) => {
 
     return (
         <div className={active ? "projectBoard boardActive" : "projectBoard"} style={delayStyle}>
-            {/* <div className={activeClass} > */}
-            {/* <div className="closeButton" onClick={() => setActive(0)} style={{ cursor: "pointer" }}  > */}
             <div className="closeButton" onClick={() => delaySetActive()} style={{ cursor: "pointer" }}  >
                 <FontAwesomeIcon icon={faTimes} size="1x" />
             </div>

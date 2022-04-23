@@ -221,3 +221,34 @@ export const wallart = [
 export const dials = ["hour", "minute", "second"]
 
 export const colors = ["white", "#FF0000", "#FFC107", "#2196F3", "#9C27B0", "black"]
+
+export const serviceNowProjects = [
+    {
+        name: "Conference Room Reservation",
+        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
+        img: "",
+        description: "",
+        techDescription: ""
+    },
+    {
+        name: "Conference Room Reservation",
+        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
+        img: "",
+        description: "",
+        techDescription: ""
+    },
+    {
+        name: "Conference Room Reservation",
+        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
+        img: "",
+        description: "",
+        techDescription: ""
+    },
+    {
+        name: "Conference Room Reservation",
+        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
+        img: "",
+        description: "",
+        techDescription: ""
+    },
+]

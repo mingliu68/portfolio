@@ -462,27 +462,28 @@ body{
   .serviceNowModal {
     width: 80vw;
     height: 80vh;
-    box-shadow: 8px 8px #293e40, -8px -8px #80b6a1;
+    box-shadow: 8px 8px #1e2c2e, -8px -8px #80b6a1;
   }
 
   .serviceNowModalContainer {
     width: 100%;
     height: 100%;
-    padding: 30px;
+    /*padding: 30px;*/
     box-sizing: border-box;
     background: #f2f2f2;
   }
-  
+
   .serviceNowModalClose {
     cursor: pointer;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background: #80b6a1;
-    padding: 10px;
-    margin-right: 10px;
+    position: absolute;
+    padding: 5px;
+    right: 11px;
     float: right;
-    margin-top: 10px;
+    top: 11px;
     color: white;
   }
 
@@ -930,7 +931,7 @@ body{
       }
 
       .icon-servicenow {
-        top: 55px;
+        top: 56px;
         /*position: absolute;
         z-index: 10;*/
         right: 80px;
@@ -945,13 +946,71 @@ body{
         /*box-shadow: 8px 8px #293e40, -8px -8px #80b6a1;*/
       }
 
-      .serviceNowModalContainer {
-        /*width: 100%;
-        height: 100%;*/
-        padding: 50px;
-        /*box-sizing: border-box;
-        background: #f2f2f2;*/
+      .serviceNowModalHeader {
+        width: 100%; 
+        height: 50px; 
+        background: #293e40; 
+        border-bottom: 4px solid #5a7f71; 
+        box-sizing: border-box;
+        color: white;
+        text-align: left;
+        padding: 12px 14px;
+        font-size: 24px;
+        font-weight: 700;
       }
+
+      .serviceNowModalNavPanel {
+        width: 30%; 
+        height: calc(100% - 50px);
+        background: #293e40; 
+        float: left;
+        max-width: 300px;
+      }
+
+      .serviceNowModalNavPanel ul {
+        width: 100%; 
+        z-index: 10;
+        color: white; 
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+      }
+
+      .serviceNowModalNavPanel ul li {
+        width: 100%; 
+        padding: 20px 18px; 
+        box-sizing: border-box; 
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        text-align: left;
+        cursor: pointer;
+        /* background: #293e40; */
+      }
+
+      .serviceNowModalNavPanel ul li:hover {
+          background: #1e2c2e;
+        }
+
+      .serviceNowModalNavPanel ul li.activeProj {
+        background: #3c4d4f;
+      }
+
+      
+
+      .serviceNowModalContentFrame {
+        width: 70%;
+        min-width: calc(100% - 300px);
+        height: calc(100% - 50px);
+        background: #f2f2f2;
+        float: left
+      }
+
+      /* .serviceNowModalContainer {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        box-sizing: border-box;
+        background: #f2f2f2;
+      } */
       
       /* .serviceNowModalClose {
         cursor: pointer;

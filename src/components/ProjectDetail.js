@@ -16,7 +16,6 @@ const ProjectDetail = (props) => {
                 <div style={styles.detailContainer}>
                     <h1 style={styles.title}>{project.boardDisplay}</h1>
                     <div style={styles.titleYear}>- {project.year} -</div>
-                    {/* <div style={{ fontFamily: "source sans pro", fontSize: 16, fontWeight: 400 }}>{project.description}</div> */}
                     <div style={styles.starDivContainer}>
                         <FontAwesomeIcon icon={faStar} size="2x" style={styles.star} />
                     </div>
