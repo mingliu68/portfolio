@@ -14,7 +14,6 @@ const ProjectBoard = (props) => {
             setDelayStyle({})
             setActive(0);
         }, 800);
-
     }
 
     return (

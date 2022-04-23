@@ -15,6 +15,15 @@ const UpperContainer = () => {
                 <div className="desk-trim" />
             </div>
             <div className="container" style={{ zIndex: 5 }}>
+                {/* new serviceNow logo tag */}
+                <div className="icon-servicenow">
+                    <button title="ServiceNow" type="button" data-toggle="modal" data-target="#servicenow">
+                        servicen
+                        <span style={{ color: "#80b611" }}>o</span>
+                        w
+                    </button>
+                </div>
+
                 <div className="desktop">
                     <div className="pc_frame" id="pc_frame">
                         <div className="girl_box">
@@ -29,7 +38,7 @@ const UpperContainer = () => {
                         <div className="msg">
                             <p></p>
                             <p>Hi there!</p>
-                            <p>I'm Ming, a full stack engineer </p>
+                            <p>I'm Ming, a full stack developer </p>
                             <p>based in New York, NY. </p>
                             <p>I build web & mobile apps on </p>
                             <p>weekdays and run wild with my two </p>

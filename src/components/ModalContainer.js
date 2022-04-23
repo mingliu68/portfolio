@@ -3,6 +3,7 @@ import ModalMe from './ModalMe';
 import ModalContact from './ModalContact';
 import ModalFolder from './ModalFolder';
 import ModalDisk from './ModalDisk';
+import ModalServiceNow from './ModalServiceNow';
 
 const ModalContainer = () => {
     return (
@@ -11,6 +12,7 @@ const ModalContainer = () => {
             <ModalContact />
             <ModalFolder />
             <ModalMe />
+            <ModalServiceNow />
         </div>
     )
 }
