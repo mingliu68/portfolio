@@ -226,29 +226,52 @@ export const serviceNowProjects = [
     {
         name: "Conference Room Reservation",
         github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: "",
+        img: ["/img/roomReservation_1.png", "/img/roomReservation_2.png", "/img/roomReservation_3.png"],
+        description: "A simple conference room reservation application that lets users to reserve a conference room based on availability. " +
+            "Users enter their desired start and end date / time and the available rooms option field will be populated dynamically with the available rooms for the specified time frame.",
+        techDescription: "ServiceNow custom application, Script Includes, Scheduled Script Executions, Client Scripts, UI Policies, Access Control"
+    },
+    {
+        name: "Puppy Needs a Treat",
+        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
+        img: [],
         description: "",
         techDescription: ""
     },
     {
-        name: "Conference Room Reservation",
+        name: "My Meeting Notes",
         github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: "",
+        img: ["/img/meetingNote_1.png", "/img/meetingNote_2.png"],
         description: "",
         techDescription: ""
     },
     {
-        name: "Conference Room Reservation",
+        name: "Project Tracker",
         github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: "",
+        img: [],
         description: "",
         techDescription: ""
+    },
+]
+
+export const certificates = [
+    {
+        img: "/img/certificate.png",
+        boldDesc: "ServiceNow",
+        description: "Certified System Administrator",
+        year: "2022"
     },
     {
-        name: "Conference Room Reservation",
-        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: "",
-        description: "",
-        techDescription: ""
+        img: "/img/certificate.png",
+        boldDesc: "ServiceNow",
+        description: "Certified Application Developer",
+        year: "in progress"
     },
+    {
+        img: "/img/certificate.png",
+        boldDesc: "AWS",
+        description: "Certified Solution Architect Associate",
+        year: "in progress"
+    }
+
 ]

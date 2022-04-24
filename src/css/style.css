@@ -8,6 +8,8 @@ body{
     font-family:"Lucida Console", Monaco, monospace;
     color:#333;
     margin:0 auto;
+    box-sizing: border-box;
+
   }
 
   .upper-container {
@@ -29,7 +31,6 @@ body{
         align-items: center;
         transition-duration: 1s;
         z-index: 25;
-
         flex-direction: column;
     }
 
@@ -82,6 +83,7 @@ body{
 
       overflow-y: auto;
     }
+
     @media screen and (max-width:550px) {
       .upper-container .blackboard.boardOn .pulltag-container {
         top: 0;
@@ -118,7 +120,6 @@ body{
         
       }
 
-
       .upper-container .blackboard .project-container .project .project-mobile.mobileActive {
         height: auto;
         font-family: "Source Sans Pro", sans-serif;
@@ -130,8 +131,6 @@ body{
   
     }
     
-    
-
     .upper-container .blackboard .project-container .project > img {
       box-shadow: 0px 0px 5px #bbbbbb;
       width: 100%; 
@@ -143,7 +142,6 @@ body{
       -webkit-transform: translateZ(0);
       transform: translateZ(0)
     }
-
 
   .desk {
         width: 100%; 
@@ -322,7 +320,7 @@ body{
     line-height: 1.1;
     }
   
-  p {
+    .msg p {
         color: white; 
         font-size: 14px;
         margin: 5px 0 0 5px;
@@ -332,54 +330,54 @@ body{
         animation: type 4s steps(120, end); 
         }
   
-      p:nth-child(2){
+  .msg p:nth-child(2){
         animation: type2 4s steps(120, end);
         animation-fill-mode: both;
         animation-delay:9s;
       }
   
-      p:nth-child(3){
+   .msg p:nth-child(3){
         animation: type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:12s;
         margin-top:20px;
       }
   
-      p:nth-child(4){
+      .msg p:nth-child(4){
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:14s;
       }
   
-      p:nth-child(5){
+      .msg p:nth-child(5){
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:17s;
       }
   
-      p:nth-child(6){
+      .msg p:nth-child(6){
         animation:type2 4s steps(120, end);
         animation-fill-mode: both;
         animation-delay:19s;
       }
   
-      p:nth-child(7){
+      .msg p:nth-child(7){
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:21s;
       }
   
-      p:nth-child(8){
+      .msg p:nth-child(8){
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:24s;
       }
-      p:nth-child(9){
+      .msg p:nth-child(9){
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:26s;
       }
-      p:nth-child(10){
+      .msg p:nth-child(10){
         animation:type2 4s steps(120, end);
          animation-fill-mode: both;
         animation-delay:28s;
@@ -463,12 +461,13 @@ body{
     width: 80vw;
     height: 80vh;
     box-shadow: 8px 8px #1e2c2e, -8px -8px #80b6a1;
+    padding-left: 0 !important;
+    background: #293e40;
   }
 
   .serviceNowModalContainer {
     width: 100%;
     height: 100%;
-    /*padding: 30px;*/
     box-sizing: border-box;
     background: #f2f2f2;
   }
@@ -536,8 +535,6 @@ body{
           left:50%;
       }
 
-
-
   .modal-frame {
         height: 5px;
         width: 5px;
@@ -598,11 +595,11 @@ body{
           border-radius:0;
       }
   
-      .field {
+  .field {
           margin-bottom:5px;
       }
   
-      label {
+  label {
           vertical-align: top;
           width: 90px;
           text-align: left;
@@ -610,7 +607,7 @@ body{
           margin-top:6px;
       }
   
-      textarea {
+  textarea {
           width:235px;
           height:130px;
           margin-top:22px;
@@ -630,24 +627,24 @@ body{
           appearance: none;
       }
   
-      .form-btn.clear, .form-msg-btn.clear {
+  .form-btn.clear, .form-msg-btn.clear {
           background:orange;
       }
 
-      .form-msg-btn.send {
+  .form-msg-btn.send {
         margin-bottom: 10px;
       }
 
-      .form-btn.clear:active, .form-msg-btn.clear:active {
+  .form-btn.clear:active, .form-msg-btn.clear:active {
         background: red
       }
   
-      .form-btn.send, .form-msg-btn.send {
+  .form-btn.send, .form-msg-btn.send {
           background: green;
           border-radius:0;
       }    
 
-      .form-btn.send:active, .form-msg-btn.send:active {
+  .form-btn.send:active, .form-msg-btn.send:active {
         background: blue
       }
 
@@ -713,18 +710,93 @@ body{
   .full-footer {
       display:none;
   }
-  
+
+  .serviceNowModalHeader {
+    width: 100%; 
+    height: 50px; 
+    background: #293e40; 
+    border-bottom: 4px solid #5a7f71; 
+    box-sizing: border-box;
+    color: white;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .serviceNowModalContentMain {
+    padding: 12px;
+    background: #f2f2f2;
+  }
+
+  .serviceNowModalContentMain .serviceNowModalContent{
+    padding: 15px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .serviceNowModalContentMain .serviceNowModalContent p{
+    font-size: 0.9em;
+    line-height: 1.2;
+    margin: 8px 0;
+  }
+
+  .serviceNowModalContentMain .serviceNowModalContent div {
+    padding: 10px 20px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(41, 62, 64);
+    margin: 8px 0;
+  }
+  .serviceNowModalContentMain .serviceNowModalContent a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .serviceNowProjectImgContainer {
+    width: 100%;
+    border: 1px solid #cccccc;
+  }
+
+  .serviceNowProjectImg {
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+  }
+
+  .serviceNowProjectImgContainer .sliderArrow {
+    position: absolute; 
+    top: 160px;
+    background: rgba(217, 217, 203, 0.50);
+    padding: 10px;
+    cursor: pointer; 
+    color: #293e40;
+  }
+
+  .serviceNowProjectImgContainer .sliderArrow.leftArrow {
+    left: 0;
+  }
+
+  .serviceNowProjectImgContainer .sliderArrow.rightArrow {
+    right: 0;
+  }
+
+  .serviceNowModalContentTitle {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    background: #e6e9eb;
+    border-bottom: 1px solid #cbcbcb;
+    box-sizing: border-box;
+  }
+
+
+
   @media screen and (min-width:551px) {
-      .msg {
-        padding: 0 10px;
-        width: 400px;
-        height: 300px;
-      }
+      .msg { padding: 0 10px; width: 400px; height: 300px;}
   
-      .msg p {
-        font-size: 19px;
-        
-        }
+      .msg p { font-size: 19px;}
   
       .msg p:nth-child(2){
         animation: type2 4s steps(120, end);
@@ -754,7 +826,7 @@ body{
   
       .msg p:nth-child(6){
         animation:type2 4s steps(120, end);
-         animation-fill-mode: both;
+        animation-fill-mode: both;
         animation-delay:18s;
       }
   
@@ -811,11 +883,9 @@ body{
         width:420px;
         height:300px;
         margin:150px 50px 170px;
-
       }
   
       .container {
-
         width:500px;
         height:610px;
       }
@@ -854,12 +924,11 @@ body{
         }
       }
 
-  
       @keyframes x {
       0%, 50%{ 
         box-shadow:  
       80px 20px 0 #000000, 90px 20px 0 #000000, 100px 20px 0 #000000, 110px 20px 0 #000000, 120px 20px 0 #000000, 130px 20px 0 #000000, 70px 30px 0 #000000, 80px 30px 0 #000000, 90px 30px 0 #000000, 100px 30px 0 #000000, 110px 30px 0 #000000, 120px 30px 0 #000000, 130px 30px 0 #ff0000, 140px 30px 0 #000000, 60px 40px 0 #000000, 70px 40px 0 #000000, 80px 40px 0 #000000, 90px 40px 0 #000000, 100px 40px 0 #000000, 110px 40px 0 #ff0000, 120px 40px 0 #ff0000, 130px 40px 0 #ff0000, 140px 40px 0 #ffffff, 150px 40px 0 #000000, 60px 50px 0 #000000, 70px 50px 0 #000000, 80px 50px 0 #000000, 90px 50px 0 #000000, 100px 50px 0 #ff0000, 110px 50px 0 #ff0000, 120px 50px 0 #ff0000, 130px 50px 0 #ffffff, 140px 50px 0 #000000, 150px 50px 0 #000000, 160px 50px 0 #000000, 50px 60px 0 #000000, 60px 60px 0 #000000, 70px 60px 0 #000000, 80px 60px 0 #000000, 90px 60px 0 #ff0000, 100px 60px 0 #ff0000, 110px 60px 0 #ff0000, 120px 60px 0 #000000, 130px 60px 0 #000000, 140px 60px 0 #000000, 150px 60px 0 #000000, 160px 60px 0 #000000, 50px 70px 0 #000000, 60px 70px 0 #000000, 70px 70px 0 #000000, 80px 70px 0 #000000, 90px 70px 0 #ff0000, 100px 70px 0 #ff0000, 110px 70px 0 #000000, 120px 70px 0 #000000, 130px 70px 0 #000000, 140px 70px 0 #000000, 150px 70px 0 #000000, 160px 70px 0 #000000, 50px 80px 0 #000000, 60px 80px 0 #000000, 70px 80px 0 #000000, 80px 80px 0 #000000, 90px 80px 0 #000000, 100px 80px 0 #000000, 110px 80px 0 #000000, 120px 80px 0 #ffcdd2, 130px 80px 0 #000000, 140px 80px 0 #ffcdd2, 150px 80px 0 #000000, 50px 90px 0 #000000, 60px 90px 0 #000000, 70px 90px 0 #000000, 80px 90px 0 #000000, 90px 90px 0 #000000, 100px 90px 0 #000000, 110px 90px 0 #000000, 120px 90px 0 #ffcdd2, 130px 90px 0 #000000, 140px 90px 0 #ffcdd2, 150px 90px 0 #000000, 50px 100px 0 #000000, 60px 100px 0 #000000, 70px 100px 0 #000000, 80px 100px 0 #000000, 90px 100px 0 #000000, 100px 100px 0 #000000, 110px 100px 0 #000000, 120px 100px 0 #ffcdd2, 130px 100px 0 #ffcdd2, 140px 100px 0 #ffcdd2, 150px 100px 0 #000000, 60px 110px 0 #000000, 70px 110px 0 #000000, 80px 110px 0 #000000, 90px 110px 0 #000000, 100px 110px 0 #000000, 110px 110px 0 #ffcdd2, 120px 110px 0 #ffcdd2, 130px 110px 0 #ffcdd2, 140px 110px 0 #000000, 60px 120px 0 #000000, 70px 120px 0 #9c27b0, 80px 120px 0 #9c27b0, 90px 120px 0 #000000, 100px 120px 0 #000000, 110px 120px 0 #000000, 120px 120px 0 #000000, 130px 120px 0 #000000, 60px 130px 0 #000000, 70px 130px 0 #000000, 80px 130px 0 #ffcdd2, 90px 130px 0 #ffcdd2, 100px 130px 0 #000000, 110px 130px 0 #000000, 120px 130px 0 #000000, 130px 130px 0 #000000, 140px 130px 0 #000000, 50px 140px 0 #000000, 60px 140px 0 #ffffff, 70px 140px 0 #000000, 80px 140px 0 #ffcdd2, 90px 140px 0 #ffcdd2, 100px 140px 0 #000000, 110px 140px 0 #ffffff, 120px 140px 0 #ffffff, 130px 140px 0 #000000, 140px 140px 0 #ffffff, 150px 140px 0 #000000, 50px 150px 0 #000000, 60px 150px 0 #ffffff, 70px 150px 0 #ffffff, 80px 150px 0 #000000, 90px 150px 0 #000000, 100px 150px 0 #000000, 110px 150px 0 #000000, 120px 150px 0 #000000, 130px 150px 0 #ffffff, 140px 150px 0 #ffffff, 150px 150px 0 #000000, 60px 160px 0 #000000, 70px 160px 0 #000000, 120px 160px 0 #000000, 130px 160px 0 #000000, 140px 160px 0 #000000;height: 10px; width: 10px;
-        }
+      }
       50.01%, 100%{
         box-shadow:  80px 10px 0 #000000, 90px 10px 0 #000000, 100px 10px 0 #000000, 110px 10px 0 #000000, 120px 10px 0 #000000, 130px 10px 0 #000000, 70px 20px 0 #000000, 80px 20px 0 #000000, 90px 20px 0 #000000, 100px 20px 0 #000000, 110px 20px 0 #000000, 120px 20px 0 #000000, 130px 20px 0 #ff0000, 140px 20px 0 #000000, 60px 30px 0 #000000, 70px 30px 0 #000000, 80px 30px 0 #000000, 90px 30px 0 #000000, 100px 30px 0 #000000, 110px 30px 0 #ff0000, 120px 30px 0 #ff0000, 130px 30px 0 #ff0000, 140px 30px 0 #ffffff, 150px 30px 0 #000000, 60px 40px 0 #000000, 70px 40px 0 #000000, 80px 40px 0 #000000, 90px 40px 0 #000000, 100px 40px 0 #ff0000, 110px 40px 0 #ff0000, 120px 40px 0 #ff0000, 130px 40px 0 #ffffff, 140px 40px 0 #000000, 150px 40px 0 #000000, 160px 40px 0 #000000, 50px 50px 0 #000000, 60px 50px 0 #000000, 70px 50px 0 #000000, 80px 50px 0 #000000, 90px 50px 0 #ff0000, 100px 50px 0 #ff0000, 110px 50px 0 #ff0000, 120px 50px 0 #000000, 130px 50px 0 #000000, 140px 50px 0 #000000, 150px 50px 0 #000000, 160px 50px 0 #000000, 50px 60px 0 #000000, 60px 60px 0 #000000, 70px 60px 0 #000000, 80px 60px 0 #000000, 90px 60px 0 #ff0000, 100px 60px 0 #ff0000, 110px 60px 0 #000000, 120px 60px 0 #000000, 130px 60px 0 #000000, 140px 60px 0 #000000, 150px 60px 0 #000000, 160px 60px 0 #000000, 50px 70px 0 #000000, 60px 70px 0 #000000, 70px 70px 0 #000000, 80px 70px 0 #000000, 90px 70px 0 #000000, 100px 70px 0 #000000, 110px 70px 0 #000000, 120px 70px 0 #ffcdd2, 130px 70px 0 #000000, 140px 70px 0 #ffcdd2, 150px 70px 0 #000000, 50px 80px 0 #000000, 60px 80px 0 #000000, 70px 80px 0 #000000, 80px 80px 0 #000000, 90px 80px 0 #000000, 100px 80px 0 #000000, 110px 80px 0 #000000, 120px 80px 0 #ffcdd2, 130px 80px 0 #000000, 140px 80px 0 #ffcdd2, 150px 80px 0 #000000, 50px 90px 0 #000000, 60px 90px 0 #000000, 70px 90px 0 #000000, 80px 90px 0 #000000, 90px 90px 0 #000000, 100px 90px 0 #000000, 110px 90px 0 #000000, 120px 90px 0 #ffcdd2, 130px 90px 0 #ffcdd2, 140px 90px 0 #ffcdd2, 150px 90px 0 #000000, 60px 100px 0 #000000, 70px 100px 0 #000000, 80px 100px 0 #000000, 90px 100px 0 #000000, 100px 100px 0 #ffcdd2, 110px 100px 0 #ffcdd2, 120px 100px 0 #ffcdd2, 130px 100px 0 #ffcdd2, 140px 100px 0 #000000, 60px 110px 0 #000000, 70px 110px 0 #9c27b0, 80px 110px 0 #000000, 90px 110px 0 #000000, 100px 110px 0 #000000, 110px 110px 0 #000000, 120px 110px 0 #000000, 130px 110px 0 #000000, 60px 120px 0 #000000, 70px 120px 0 #9c27b0, 80px 120px 0 #000000, 90px 120px 0 #ffcdd2, 100px 120px 0 #ffcdd2, 110px 120px 0 #000000, 120px 120px 0 #000000, 60px 130px 0 #000000, 70px 130px 0 #9c27b0, 80px 130px 0 #000000, 90px 130px 0 #ffcdd2, 100px 130px 0 #ffcdd2, 110px 130px 0 #000000, 120px 130px 0 #000000, 70px 140px 0 #000000, 80px 140px 0 #000000, 90px 140px 0 #000000, 100px 140px 0 #000000, 110px 140px 0 #ffffff, 120px 140px 0 #ffffff, 130px 140px 0 #000000, 80px 150px 0 #000000, 90px 150px 0 #ffffff, 100px 150px 0 #ffffff, 110px 150px 0 #ffffff, 120px 150px 0 #ffffff, 130px 150px 0 #000000, 90px 160px 0 #000000, 100px 160px 0 #000000, 110px 160px 0 #000000, 120px 160px 0 #000000;height: 10px; width: 10px;
         }
@@ -882,6 +951,7 @@ body{
         box-shadow:  50px 40px 0 #000000, 120px 40px 0 #000000, 130px 40px 0 #000000, 140px 40px 0 #000000, 40px 50px 0 #000000, 50px 50px 0 #ffffff, 60px 50px 0 #000000, 110px 50px 0 #000000, 120px 50px 0 #795548, 130px 50px 0 #e91e63, 140px 50px 0 #795548, 150px 50px 0 #000000, 40px 60px 0 #000000, 50px 60px 0 #795548, 60px 60px 0 #000000, 110px 60px 0 #000000, 120px 60px 0 #e91e63, 130px 60px 0 #795548, 140px 60px 0 #795548, 150px 60px 0 #795548, 160px 60px 0 #000000, 40px 70px 0 #000000, 50px 70px 0 #795548, 60px 70px 0 #000000, 100px 70px 0 #000000, 110px 70px 0 #795548, 120px 70px 0 #795548, 130px 70px 0 #000000, 140px 70px 0 #795548, 150px 70px 0 #000000, 160px 70px 0 #000000, 40px 80px 0 #000000, 50px 80px 0 #795548, 60px 80px 0 #795548, 70px 80px 0 #000000, 80px 80px 0 #000000, 90px 80px 0 #000000, 100px 80px 0 #000000, 110px 80px 0 #795548, 120px 80px 0 #795548, 130px 80px 0 #000000, 140px 80px 0 #795548, 150px 80px 0 #795548, 160px 80px 0 #ffffff, 170px 80px 0 #000000, 30px 90px 0 #000000, 40px 90px 0 #ffffff, 50px 90px 0 #795548, 60px 90px 0 #795548, 70px 90px 0 #795548, 80px 90px 0 #795548, 90px 90px 0 #795548, 100px 90px 0 #795548, 110px 90px 0 #000000, 120px 90px 0 #000000, 130px 90px 0 #000000, 140px 90px 0 #ffffff, 150px 90px 0 #ffffff, 160px 90px 0 #ffffff, 170px 90px 0 #000000, 30px 100px 0 #000000, 40px 100px 0 #000000, 50px 100px 0 #ffffff, 60px 100px 0 #000000, 70px 100px 0 #795548, 80px 100px 0 #795548, 90px 100px 0 #795548, 100px 100px 0 #795548, 110px 100px 0 #795548, 120px 100px 0 #ffffff, 130px 100px 0 #ffffff, 140px 100px 0 #000000, 150px 100px 0 #000000, 160px 100px 0 #000000, 30px 110px 0 #000000, 40px 110px 0 #ffffff, 50px 110px 0 #ffffff, 60px 110px 0 #000000, 70px 110px 0 #000000, 80px 110px 0 #ffffff, 90px 110px 0 #ffffff, 100px 110px 0 #000000, 110px 110px 0 #ffffff, 120px 110px 0 #ffffff, 130px 110px 0 #000000, 140px 110px 0 #ffffff, 150px 110px 0 #ffffff, 160px 110px 0 #000000, 40px 120px 0 #000000, 50px 120px 0 #000000, 80px 120px 0 #000000, 90px 120px 0 #000000, 110px 120px 0 #000000, 120px 120px 0 #000000, 140px 120px 0 #000000, 150px 120px 0 #000000;height: 10px; width: 10px;
         }
       }
+
       .icon-disk {
         animation: icon 2s steps(300, end);
         animation-fill-mode: both;
@@ -932,31 +1002,14 @@ body{
 
       .icon-servicenow {
         top: 56px;
-        /*position: absolute;
-        z-index: 10;*/
         right: 80px;
         background: #293e40;
-        /*border-radius: 3px;*/
         border: none;
       }
 
       .serviceNowModal {
         width: 80vw;
         height: 80vh;
-        /*box-shadow: 8px 8px #293e40, -8px -8px #80b6a1;*/
-      }
-
-      .serviceNowModalHeader {
-        width: 100%; 
-        height: 50px; 
-        background: #293e40; 
-        border-bottom: 4px solid #5a7f71; 
-        box-sizing: border-box;
-        color: white;
-        text-align: left;
-        padding: 12px 14px;
-        font-size: 24px;
-        font-weight: 700;
       }
 
       .serviceNowModalNavPanel {
@@ -983,7 +1036,6 @@ body{
         border: 1px solid rgba(0, 0, 0, 0.15);
         text-align: left;
         cursor: pointer;
-        /* background: #293e40; */
       }
 
       .serviceNowModalNavPanel ul li:hover {
@@ -994,14 +1046,77 @@ body{
         background: #3c4d4f;
       }
 
-      
-
       .serviceNowModalContentFrame {
         width: 70%;
         min-width: calc(100% - 300px);
         height: calc(100% - 50px);
         background: #f2f2f2;
-        float: left
+        float: left;
+        text-align: left;
+      }
+
+      .serviceNowModalContentContainer  {
+        margin: 0;
+      }
+
+      /* .serviceNowModalContentTitle {
+        width: 100%;
+        padding: 12px;
+        text-align: left;
+        background: #e6e9eb;
+        border-bottom: 1px solid #cbcbcb;
+        box-sizing: border-box;
+      } */
+
+      .serviceNowModalContentMain .cardContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .serviceNowModalContentMain .cardContainer .contentCard {
+        width: 32%;
+        margin: 5px 0;
+        height: 100px;
+        border-radius: 5px;
+        border: 1px solid rgb(213, 213, 213);
+        box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .serviceNowModalContentMain .cardContainer .contentCard .cardImg {
+        min-width: 90px;
+        height: 90px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .serviceNowModalContentMain .cardContainer .contentCard .cardImg img {
+        width: 70px;
+        height: auto;
+      }
+      
+      .serviceNowModalContentMain .cardContainer .contentCard .cardInfoContainer {
+        /* width: calc(100% - 120px); */
+        box-sizing: border-box;
+        text-align: left;
+        padding: 15px 10px 15px 0;
+        width: calc(100% - 100px);
+      }
+      
+      .serviceNowModalContentMain .cardContainer .contentCard .cardTitle {
+        color: #333333;
+        margin: 0;
+      }
+
+      .serviceNowModalContentMain .cardContainer .contentCard .cardInfo {
+        color: #666666;
+        margin: 5px 0;
+        font-size: 12px;
+        line-height: 1.2;
       }
 
       /* .serviceNowModalContainer {
@@ -1118,16 +1233,7 @@ body{
         width: 55%;
         margin-right: 3%;
       }
-      /* .form-btn {
-          border-radius: 0;
-          font-family: "Lucida Console",Monaco, Monospace;
-          padding: 5px 10px 4px;
-          border: 1px solid grey;
-          color: white;
-          width:120px;
-          border-radius:0;
-      } */
-  
+
       .form-btn.clear, .form-msg-btn.clear {
           background:orange;
       }
@@ -1135,7 +1241,6 @@ body{
       .form-btn.send, .form-msg-btn.send {
           background: green;
           margin-left: 10px;
-  
       }
       #contact-form {
           width:350px;
@@ -1434,7 +1539,6 @@ body{
     
       .github {
         display: block;
-    
         position: absolute;
         width:5px;
         height:5px;
@@ -1443,7 +1547,6 @@ body{
     
       .twitter {
         display: block;
-    
         position: absolute;
         width:5px;
         height:5px;
@@ -1452,11 +1555,9 @@ body{
     
       .wallart {
         display: block;
-      
         position: absolute;
         background-color: grey;
       }
-
 
       .drawingBoard-container {
         display: block;
@@ -1490,6 +1591,126 @@ body{
       }
   }
 
+  @media screen and (max-width: 1400px) {
+    .serviceNowModalContentMain .cardContainer .contentCard {
+      width: 49%;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    .serviceNowModalContentMain .cardContainer .contentCard {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width:550px) {
+
+    .serviceNowModal {
+      width: 90vw;
+    }
+
+    .serviceNowModalNavPanel {
+      width: 100%; 
+      background: #293e40; 
+      float: left;
+    }
+
+    .serviceNowModalNavPanel ul {
+      width: 100%; 
+      z-index: 10;
+      color: white; 
+      list-style-type: none; 
+      padding: 0;
+      margin: 0;
+    }
+
+    .serviceNowModalNavPanel ul li {
+      width: 100%; 
+      padding: 20px 18px; 
+      box-sizing: border-box; 
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .serviceNowModalNavPanel ul li:hover {
+        background: #1e2c2e;
+      }
+
+    .serviceNowModalNavPanel ul li.activeProj {
+      background: #3c4d4f;
+    }
+
+    .serviceNowModalContentFrame {
+      width: 100%;
+      background: #f2f2f2;
+      float: left;
+      text-align: left;
+    }
+
+    .serviceNowModalContentContainer  {
+      margin: 0;
+    }
+
+    /* .serviceNowModalContentTitle {
+      width: 100%;
+      padding: 12px;
+      text-align: left;
+      background: #e6e9eb;
+      border-bottom: 1px solid #cbcbcb;
+      box-sizing: border-box;
+    } */
+
+    .serviceNowModalContentMain .cardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .serviceNowModalContentMain .cardContainer .contentCard {
+      width: 100%;
+      margin: 5px 0;
+      height: 100px;
+      border-radius: 5px;
+      border: 1px solid rgb(213, 213, 213);
+      box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .serviceNowModalContentMain .cardContainer .contentCard .cardImg {
+      min-width: 90px;
+      height: 90px;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .serviceNowModalContentMain .cardContainer .contentCard .cardImg img {
+      width: 70px;
+      height: auto;
+    }
+    
+    .serviceNowModalContentMain .cardContainer .contentCard .cardInfoContainer {
+      box-sizing: border-box;
+      text-align: left;
+      padding: 15px 10px 15px 0;
+      width: calc(100% - 100px);
+    }
+    
+    .serviceNowModalContentMain .cardContainer .contentCard .cardTitle {
+      color: #333333;
+      margin: 0;
+    }
+
+    .serviceNowModalContentMain .cardContainer .contentCard .cardInfo {
+      color: #666666;
+      margin: 5px 0;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
 
 
   
