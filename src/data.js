@@ -241,7 +241,7 @@ export const serviceNowProjects = [
     {
         name: "Job Listing Tracker",
         github: "https://github.com/mingliu68/SN-job-listing-tracker",
-        img: ["/img/jobListingTracker_1.png"],
+        img: ["/img/jobListingTracker_1.png",],
         description: "Simple job listing tracking app to keep track of recruiter contacts and application progress",
         techDescription: "ServiceNow custom application"
     },

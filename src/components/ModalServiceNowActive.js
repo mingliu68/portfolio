@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ModalServiceNowActiveImages from "./ModalServiceNowActiveImages";
 
 
 
 const ModalServiceNowActive = (props) => {
-    const { project, index } = { ...props }
+    const { project, index, activeImg, setActiveImg } = { ...props }
+    //const [activeImg, setActiveImg] = useState(0);
 
     return (
         <div className="serviceNowModalContentContainer">
@@ -15,7 +16,7 @@ const ModalServiceNowActive = (props) => {
             <div className="serviceNowModalContentMain">
                 {
                     project.img.length > 0 ?
-                        <ModalServiceNowActiveImages images={project.img} />
+                        <ModalServiceNowActiveImages images={project.img} activeImg={activeImg} setActiveImg={setActiveImg} />
                         :
                         null
                 }

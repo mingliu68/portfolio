@@ -5,13 +5,15 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const ModalServiceNowActiveImages = (props) => {
-    const [activeImg, setActiveImg] = useState(0);
-    const { images } = { ...props }
+
+    const { images, activeImg, setActiveImg } = { ...props }
+    //const [activeImg, setActiveImg] = useState(index);
 
     const changeImg = (value) => {
         let current = activeImg
         setActiveImg(current + value);
     }
+
 
     return (
         <div className="serviceNowProjectImgContainer" style={{ position: "relative" }}>

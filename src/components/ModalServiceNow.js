@@ -9,6 +9,8 @@ import ModalServiceNowInactive from "./ModalServiceNowInactive";
 const ModalServiceNow = () => {
 
     const [activeProject, setActiveProject] = useState(-1);
+    const [activeImg, setActiveImg] = useState(0);
+
 
     return (
         <div id="servicenow" className="modal fade serviceNowModal" role="dialog">
@@ -26,7 +28,12 @@ const ModalServiceNow = () => {
                             return (
                                 <li
                                     className={activeProject === index ? "activeProj" : null}
-                                    onClick={() => setActiveProject(activeProject != index ? index : -1)}
+                                    onClick={() => {
+                                        setActiveProject(activeProject != index ? index : -1)
+                                        setActiveImg(0)
+                                    }
+                                    }
+                                    key={index}
                                 >
                                     {project.name}
                                 </li>
@@ -37,7 +44,7 @@ const ModalServiceNow = () => {
                 <div className="serviceNowModalContentFrame">
                     {
                         activeProject >= 0 ?
-                            <ModalServiceNowActive project={serviceNowProjects[activeProject]} index={activeProject} />
+                            <ModalServiceNowActive project={serviceNowProjects[activeProject]} index={activeProject} activeImg={activeImg} setActiveImg={setActiveImg} />
                             :
                             <ModalServiceNowInactive />
                     }

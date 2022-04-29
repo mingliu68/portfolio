@@ -52,6 +52,7 @@ const WallArt = (props) => {
         console.log(pc)
     }
 
+
     useEffect(() => {
         setPcBounding();
     }, [])
@@ -68,8 +69,11 @@ const WallArt = (props) => {
             onMouseDown={e => handleMouseDown(e)}
             onMouseMove={e => mouseDrag(e)}
             onMouseUp={e => closeMouseDragEvent(e)}
+
         >
+
             <div style={{ cursor: (move ? "grabbing" : mouseDown ? "grab" : "pointer"), width: (width + 10), height: (height + 10) }} />
+
         </div>
     )
 }

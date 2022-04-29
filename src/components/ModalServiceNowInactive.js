@@ -4,6 +4,7 @@ import { certificates } from "../data";
 
 const ModalServiceNowInactive = () => {
 
+
     return (
         <div className="serviceNowModalContentContainer">
             <div className="serviceNowModalContentTitle">
@@ -14,7 +15,7 @@ const ModalServiceNowInactive = () => {
                     {
                         certificates.map((item, index) => {
                             return (
-                                <div className="contentCard" index={index}>
+                                <div className="contentCard" index={index} key={index}>
                                     <div className="cardImg">
                                         <img src={item.img} />
                                     </div>
