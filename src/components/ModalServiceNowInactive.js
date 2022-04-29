@@ -20,23 +20,14 @@ const ModalServiceNowInactive = () => {
                                     </div>
                                     <div className="cardInfoContainer">
                                         <h5 className="cardTitle">Certificate</h5>
-                                        <p className="cardInfo"><b>{item.boldDesc + " "}</b>{item.description + " (" + item.year + ")"}</p>
+                                        <p className="cardInfo"><strong>{item.boldDesc + " "}</strong>{item.description + " (" + item.year + ")"}</p>
                                     </div>
                                 </div>
                             )
                         })
                     }
-
-
-                    {/* <div className="contentCard">
-                        <div className="cardImg"></div>
-
-                    </div>
-                    <div className="contentCard">
-                        <div className="cardImg"></div>
-                    </div> */}
-
                 </div>
+                <h5>Currently in the process of obtaining <strong>ServiceNow</strong> Certified Application Developer certificate</h5>
 
 
 

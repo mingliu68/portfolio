@@ -10,7 +10,6 @@ const ModalServiceNowActive = (props) => {
         <div className="serviceNowModalContentContainer">
             <div className="serviceNowModalContentTitle">
                 {project.name}
-
             </div>
 
             <div className="serviceNowModalContentMain">

@@ -729,6 +729,12 @@ body{
     background: #f2f2f2;
   }
 
+  .serviceNowModalContentMain > h5 {
+    border-left: 10px solid #80b6a1;
+    padding-left: 10px;
+    line-height: 1.2;
+  }
+
   .serviceNowModalContentMain .serviceNowModalContent{
     padding: 15px 10px 10px;
     display: flex;
@@ -749,9 +755,14 @@ body{
     background: rgb(41, 62, 64);
     margin: 8px 0;
   }
+  .serviceNowModalContentMain .serviceNowModalContent div:hover {
+    background: #1e2c2e;
+  }
+  
   .serviceNowModalContentMain .serviceNowModalContent a {
     color: white;
     text-decoration: none;
+    font-weight: 700;
   }
 
   .serviceNowProjectImgContainer {

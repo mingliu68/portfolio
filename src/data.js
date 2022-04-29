@@ -227,31 +227,31 @@ export const serviceNowProjects = [
         name: "Conference Room Reservation",
         github: "https://github.com/mingliu68/SN-conference-rm-reservation",
         img: ["/img/roomReservation_1.png", "/img/roomReservation_2.png", "/img/roomReservation_3.png"],
-        description: "A simple conference room reservation application that lets users to reserve a conference room based on availability. " +
-            "Users enter their desired start and end date / time and the available rooms option field will be populated dynamically with the available rooms for the specified time frame.",
-        techDescription: "ServiceNow custom application, Script Includes, Scheduled Script Executions, Client Scripts, UI Policies, Access Control"
+        description: "A simple application that lets users to reserve a conference room based on availability. " +
+            'Users enter their desired start and end date / time,  and the "Available Rooms" option field will be populated dynamically with the available rooms for the specified time frame.',
+        techDescription: "ServiceNow custom application, JavaScript, Script Includes, Scheduled Script Executions, Client Scripts, UI Policies, Access Control"
     },
     {
-        name: "Puppy Needs a Treat",
-        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: [],
-        description: "",
-        techDescription: ""
+        name: "SP - My Meeting Notes",
+        github: "https://github.com/mingliu68/SN-meeting-notes",
+        img: ["/img/meetingNote_1.png", "/img/meetingNote_2.png", "/img/meetingNote_3.png"],
+        description: "Simple meeting note taking Service Portal application.",
+        techDescription: "Service Portal app, AngularJS, JavaScript, HTML, CSS, Server Script, Client Script, Widgets"
     },
     {
-        name: "My Meeting Notes",
-        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: ["/img/meetingNote_1.png", "/img/meetingNote_2.png"],
-        description: "",
-        techDescription: ""
+        name: "Job Listing Tracker",
+        github: "https://github.com/mingliu68/SN-job-listing-tracker",
+        img: ["/img/jobListingTracker_1.png"],
+        description: "Simple job listing tracking app to keep track of recruiter contacts and application progress",
+        techDescription: "ServiceNow custom application"
     },
-    {
-        name: "Project Tracker",
-        github: "https://github.com/mingliu68/SN-conference-rm-reservation",
-        img: [],
-        description: "",
-        techDescription: ""
-    },
+    // {
+    //     name: "SP - Conference Room Reservation",
+    //     github: "",
+    //     img: [],
+    //     description: "",
+    //     techDescription: ""
+    // },
 ]
 
 export const certificates = [
@@ -261,17 +261,17 @@ export const certificates = [
         description: "Certified System Administrator",
         year: "2022"
     },
-    {
-        img: "/img/certificate.png",
-        boldDesc: "ServiceNow",
-        description: "Certified Application Developer",
-        year: "in progress"
-    },
-    {
-        img: "/img/certificate.png",
-        boldDesc: "AWS",
-        description: "Certified Solution Architect Associate",
-        year: "in progress"
-    }
+    // {
+    //     img: "/img/certificate.png",
+    //     boldDesc: "ServiceNow",
+    //     description: "Certified Application Developer",
+    //     year: "in progress"
+    // },
+    // {
+    //     img: "/img/certificate.png",
+    //     boldDesc: "AWS",
+    //     description: "Certified Solution Architect Associate",
+    //     year: "in progress"
+    // }
 
 ]
