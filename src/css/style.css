@@ -1070,24 +1070,15 @@ body{
         margin: 0;
       }
 
-      /* .serviceNowModalContentTitle {
-        width: 100%;
-        padding: 12px;
-        text-align: left;
-        background: #e6e9eb;
-        border-bottom: 1px solid #cbcbcb;
-        box-sizing: border-box;
-      } */
-
       .serviceNowModalContentMain .cardContainer {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
 
       .serviceNowModalContentMain .cardContainer .contentCard {
         width: 32%;
-        margin: 5px 0;
+        margin: 5px 4px;
         height: 100px;
         border-radius: 5px;
         border: 1px solid rgb(213, 213, 213);
@@ -1604,7 +1595,7 @@ body{
 
   @media screen and (max-width: 1400px) {
     .serviceNowModalContentMain .cardContainer .contentCard {
-      width: 49%;
+      width: 48%;
     }
   }
 
@@ -1663,19 +1654,10 @@ body{
       margin: 0;
     }
 
-    /* .serviceNowModalContentTitle {
-      width: 100%;
-      padding: 12px;
-      text-align: left;
-      background: #e6e9eb;
-      border-bottom: 1px solid #cbcbcb;
-      box-sizing: border-box;
-    } */
-
     .serviceNowModalContentMain .cardContainer {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
 
     .serviceNowModalContentMain .cardContainer .contentCard {

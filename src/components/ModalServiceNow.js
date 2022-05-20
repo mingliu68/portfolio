@@ -15,7 +15,7 @@ const ModalServiceNow = () => {
     return (
         <div id="servicenow" className="modal fade serviceNowModal" role="dialog">
             <div data-dismiss="modal" className="serviceNowModalClose" >
-                <FontAwesomeIcon icon={faTimes} size="1.5x" />
+                <FontAwesomeIcon icon={faTimes} size="1x" />
             </div>
             {/* dark: #1e2c2e, med: #293e40, light: #3c4d4f */}
             <div className="serviceNowModalContainer">
@@ -29,7 +29,7 @@ const ModalServiceNow = () => {
                                 <li
                                     className={activeProject === index ? "activeProj" : null}
                                     onClick={() => {
-                                        setActiveProject(activeProject != index ? index : -1)
+                                        setActiveProject(activeProject !== index ? index : -1)
                                         setActiveImg(0)
                                     }
                                     }

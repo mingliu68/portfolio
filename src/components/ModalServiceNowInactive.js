@@ -1,31 +1,20 @@
 import React from "react";
 import { certificates } from "../data";
+import ModalServiceNowCard from './ModalServiceNowCard';
 
 
 const ModalServiceNowInactive = () => {
-
-
     return (
         <div className="serviceNowModalContentContainer">
             <div className="serviceNowModalContentTitle">
                 Homepage
             </div>
-            <div className="serviceNowModalContentMain">
+            <div className="serviceNowModalContentMain" >
+               
                 <div className="cardContainer">
                     {
                         certificates.map((item, index) => {
-                            return (
-                                <div className="contentCard" index={index} key={index}>
-                                    <div className="cardImg">
-                                        <img src={item.img} alt={item.alt} />
-                                    </div>
-                                    <div className="cardInfoContainer">
-                                        <h4 className="cardTitle">Certificate</h4>
-                                        {/* <p className="cardInfo"><strong>{item.boldDesc + " "}</strong>{item.description + " (" + item.year + ")"}</p> */}
-                                        <p className="cardInfo"><strong>{item.boldDesc + " "}</strong>{item.description}</p>
-                                    </div>
-                                </div>
-                            )
+                            return <ModalServiceNowCard item={item} key={index}/> 
                         })
                     }
                 </div>

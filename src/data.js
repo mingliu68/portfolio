@@ -1,11 +1,11 @@
 export const skillset = [
     {
         cat: "Programming Language",
-        skills: ["JavaScript", "HTML5", "CSS3", "SQL", "Python", "PHP", "C#", "AngularJS"]
+        skills: ["JavaScript", "HTML5", "CSS3", "SQL", "Python", "PHP", "C#"]
     },
     {
         cat: "Frameworks / Libraries / CMS",
-        skills: ["React", "React Native", "Node.JS", "Redux", "Express", "Expo", "JQuery", "Bootstrap", "WordPress", "WooCommerce", "PrestaShop"]
+        skills: ["React", "React Native", "Node.JS", "Redux", "AngularJS", "Express", "Expo", "JQuery", "Bootstrap", "WordPress", "WooCommerce", "PrestaShop"]
     },
     {
         cat: "Tools",
@@ -268,7 +268,13 @@ export const certificates = [
         boldDesc: "ITIL",
         description: "v4 Foundation Certificate",
         year: "2022"
-    }
+    },
+    // {
+    //     img: "/img/certificate.png",
+    //     boldDesc: "AWS",
+    //     description: "Certified Solution Architect Associate",
+    //     year: "in progress"
+    // },
     // {
     //     img: "/img/certificate.png",
     //     boldDesc: "AWS",
