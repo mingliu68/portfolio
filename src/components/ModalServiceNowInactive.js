@@ -14,7 +14,7 @@ const ModalServiceNowInactive = () => {
                 <div className="cardContainer">
                     {
                         certificates.map((item, index) => {
-                            return <ModalServiceNowCard item={item} key={index}/> 
+                            return <ModalServiceNowCard {...item} key={index} />
                         })
                     }
                 </div>
