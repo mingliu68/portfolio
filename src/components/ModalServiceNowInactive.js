@@ -10,7 +10,6 @@ const ModalServiceNowInactive = () => {
                 Homepage
             </div>
             <div className="serviceNowModalContentMain" >
-               
                 <div className="cardContainer">
                     {
                         certificates.map((item, index) => {
