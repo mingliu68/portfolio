@@ -17,21 +17,22 @@ const ModalServiceNowInactive = () => {
                             return (
                                 <div className="contentCard" index={index} key={index}>
                                     <div className="cardImg">
-                                        <img src={item.img} />
+                                        <img src={item.img} alt={item.alt} />
                                     </div>
                                     <div className="cardInfoContainer">
-                                        <h5 className="cardTitle">Certificate</h5>
-                                        <p className="cardInfo"><strong>{item.boldDesc + " "}</strong>{item.description + " (" + item.year + ")"}</p>
+                                        <h4 className="cardTitle">Certificate</h4>
+                                        {/* <p className="cardInfo"><strong>{item.boldDesc + " "}</strong>{item.description + " (" + item.year + ")"}</p> */}
+                                        <p className="cardInfo"><strong>{item.boldDesc + " "}</strong>{item.description}</p>
                                     </div>
                                 </div>
                             )
                         })
                     }
                 </div>
-                <h5>Currently in the process of obtaining <strong>ServiceNow</strong> Certified Application Developer certificate</h5>
-
-
-
+                <h4>Currently in the process of obtaining the following certificates:</h4>
+                <ul style={{ lineHeight: "1.4" }}>
+                    <li><strong>ServiceNow</strong> Certified Application Developer certificate</li>
+                </ul>
             </div>
         </div>
     )

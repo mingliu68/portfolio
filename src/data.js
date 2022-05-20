@@ -257,16 +257,18 @@ export const serviceNowProjects = [
 export const certificates = [
     {
         img: "/img/certificate.png",
+        alt: "certificate image",
         boldDesc: "ServiceNow",
         description: "Certified System Administrator",
         year: "2022"
     },
-    // {
-    //     img: "/img/certificate.png",
-    //     boldDesc: "ServiceNow",
-    //     description: "Certified Application Developer",
-    //     year: "in progress"
-    // },
+    {
+        img: "/img/certificate.png",
+        alt: "certificate image",
+        boldDesc: "ITIL",
+        description: "v4 Foundation Certificate",
+        year: "2022"
+    }
     // {
     //     img: "/img/certificate.png",
     //     boldDesc: "AWS",
