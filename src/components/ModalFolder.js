@@ -11,6 +11,7 @@ const ModalFolder = () => {
             <div className="modal-inner">
                 <ul>
                     <li><b>ServiceNow</b> Certified System Administrator (2022)</li>
+                    <li><b>ITIL</b> v4 Foundation Certificate (2022)</li>
                 </ul>
 
             </div>

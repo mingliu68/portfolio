@@ -1,15 +1,20 @@
 export const skillset = [
     {
         cat: "Programming Language",
-        skills: ["JavaScript", "HTML5", "CSS3", "SQL", "Python", "PHP", "C#"]
+        skills: ["Java", "JavaScript", "HTML5", "CSS3", "SQL", "Python", "PHP", "C#"]
     },
     {
-        cat: "Frameworks / Libraries / CMS",
-        skills: ["React", "React Native", "Node.JS", "Redux", "AngularJS", "Express", "Expo", "JQuery", "Bootstrap", "WordPress", "WooCommerce", "PrestaShop"]
+        cat: "Frameworks / Libraries / Platforms",
+        skills: ["ReactJS", "Spring Boot", "ReactNative", "Node.js", "Redux", "Express.js", "Expo",
+"JQuery", "AngularJS", "Bootstrap", "MaterialUI", "Tailwind CSS", "Thymeleaf"]
+    },
+    {
+        cat: "CMS / PaaS",
+        skills: ["WordPress", "WooCommerce", "Shopify", "PrestaShop", "Webflow", "ServiceNow"]
     },
     {
         cat: "Tools",
-        skills: ["PhotoShop", "Illustrator", "InDesign", "Blender 3D", "Adobe XD", "Figma", "Unity"]
+        skills: ["PhotoShop", "Illustrator", "InDesign", "Blender 3D", "Adobe XD", "Figma", "Unity", "Git"]
     }
 ]
 
@@ -20,7 +25,7 @@ export const project_position = [
         left: "35%",
         right: null,
         transformPost: "rotate(0deg) scale(1.25) translate(0, 35px) translateZ(0)", //transformPost => transforming
-        transformPre: "rotate(-4deg) scale(1)",  // transformPre => return to original
+        transformPre: "rotate(4deg) scale(1)",  // transformPre => return to original
     },
     {
         top: "8%",
@@ -67,44 +72,8 @@ export const project_position = [
 
 export const projects = [
 
-    {
-        name: "Sarama Animal Rescue",
-        display: "Sarama Rescue - WordPress Site",
-        boardDisplay: "Sarama Rescue",
-        tech: ["JavaScript", "PHP", "HTML5", "CSS3", "MySQL", "WordPress", "WooCommerce", "JQuery"],
-        img: "/img/sarama_home.png",
-        role: ["Full Stack Engineer", "SOLO DEVELOPER"],
-        link: "https://sarama.org",
-        year: "2018",
-        github: "",
-        description: "A custom WordPress site for Sarama Animal Rescue with rescue management app and eCommerce integration.",
-        techDescription: ["WordPress theme development.",
-            "JS multi-step applications.",
-            "Custom management app.",
-            "Notification system in PHP",
-            "WooCommerce integration.",
-            "UX / UI design and development"
-        ]
-    },
-    {
-        name: "PawsnFind",
-        display: "PawsnFind - React App",
-        boardDisplay: "PawsnFind",
-        tech: ["React", "JavaScript", "Redux", "HTML5", "CSS3", "Node.JS", "Express", "PostgreSQL", "PHP", "Material UI"],
-        img: "/img/pawsnfind_home.png",
-        role: ["Full Stack Engineer", "One of seven developers"],
-        link: "https://pawsnfind.com",
-        year: "2019",
 
-        github: "https://github.com/Pawsnfind",
-        description: "Pawsnfind is a web app that connects rescues and adopters while helping rescues manageing their operation.",
-        techDescription: ["React FE w/ Redux.",
-            "Database schema design",
-            "Role based user dashboards",
-            "Express.js BE with Postgres.",
-            "Stripe and SendGrid integration.",
-            "UX/UI design and development."]
-    },
+    
     {
         name: "Brookside Media & Co.",
         display: "Brookside Media - WordPress Site",
@@ -115,7 +84,7 @@ export const projects = [
         year: "2018",
 
         github: "",
-        role: ["Full Stack Engineer", "SOLO DEVELOPER"],
+        role: ["Full Stack Engineer"],
         description: "A custom WordPress site for Brookside Media & Co.",
         techDescription: ["WordPress theme development.",
             "Contact notification system in PHP",
@@ -129,7 +98,7 @@ export const projects = [
         boardDisplay: "eCommerce Site",
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "PrestaShop", "JQuery", "MySQL"],
         img: "/img/skinDecoded_home.png",
-        role: ["Frontend Engineer", "Solo Developer"],
+        role: ["Frontend Engineer"],
         link: "https://web.archive.org/web/20141222211511/http://www.skindecoded.com/",
         year: "2011",
 
@@ -145,7 +114,7 @@ export const projects = [
         display: "eCommerce Site - PrestaShop",
         tech: ["JavaScript", "PHP", "HTML5", "CSS3", "PrestaShop", "JQuery", "MySQL"],
         img: "/img/peachLemon_home.png",
-        role: ["Frontend Engineer", "Solo Developer"],
+        role: ["Frontend Engineer"],
         link: "",
         year: "2012",
 
@@ -155,13 +124,33 @@ export const projects = [
             "Custom plug-ins integration.",
             "UX / UI design and development"]
     },
+    
+    {
+        name: "Fetched",
+        display: "Fetched - React / Node.JS",
+        boardDisplay: "Fetched",
+        tech: ["Node.JS", "ExpressJS", "React", "JavaScript", "Redux", "HTML", "CSS", "PostgreSQL", "Prisma ORM", "BootStrap"],
+        img: "/img/fetched_home.png",
+        role: ["Full Stack Engineer"],
+        link: "",
+        year: "2023 - Under development",
+
+        github: "",
+        description: "Fetched is a web app that connects rescues and adopters while helping rescues managing their operation.",
+        techDescription: [
+            "DB schema design, business logic & Rest API development",
+            "Role based user dashboards",
+            "Node.js ExpressJS BE with PostgreSQL & Prisma",
+            "GoogleMap and SendGrid integration.",
+            "UX/UI design and development."]
+    },
     {
         name: "Personal Portfolio",
         boardDisplay: "Personal Portfolio",
         display: "Personal Portfolio - React App",
         tech: ["React", "JavaScript", "HTML5", "CSS3", "Node.JS", "Express", "SendGrid"],
         img: "/img/mingliuPortfolio_home.png",
-        role: ["Full Stack Engineer", "SOLO DEVELOPER"],
+        role: ["Full Stack Engineer"],
         link: "",
         year: "2020",
 
@@ -172,7 +161,24 @@ export const projects = [
             "Express.js backend for SendGrid integration",
             "UX / UI design and development"]
     },
-
+    {
+            name: "SnapChef",
+            display: "SnapChef - SpringBoot / ChatGPT",
+            boardDisplay: "SnapChef",
+            tech: ["Java", "SpringBoot", "PostgreSQL", "Thymeleaf", "OpenAI ChatGPT", "JavaScript", "BootStrap", "HTML", "CSS"],
+            img: "/img/snapchef_home.png",
+            role: ["Full Stack Engineer"],
+            link: "https://www.youtube.com/watch?v=8nojn10SmCc",
+            year: "2023",
+            github: "https://github.com/mingliu68/quick_meal_planner",
+            description: "A web app that helps user find quick recipes utilizing the power of ChatGPT API, create customized weekly meal plan and weekly shopping list",
+            techDescription: ["Java / SpringBoot Full Stack Development",
+                "ChatGPT API integration",
+                "Personal weekly meal plan",
+                "Consolidated shopping list",
+                "Thymeleaf frontend",
+            ]
+        }
 ]
 
 export const wallart = [
