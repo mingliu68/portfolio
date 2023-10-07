@@ -140,9 +140,8 @@ export const projects = [
         techDescription: [
             "DB schema design, business logic & Rest API development",
             "Role based user dashboards",
-            "Node.js ExpressJS BE with PostgreSQL & Prisma",
-            "GoogleMap and SendGrid integration.",
-            "UX/UI design and development."]
+            "GoogleMap and SendGrid integration",
+            "UX/UI design and development"]
     },
     {
         name: "Personal Portfolio",
