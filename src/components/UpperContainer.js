@@ -38,7 +38,7 @@ const UpperContainer = () => {
                         <div className="msg">
                             <p></p>
                             <p>Hi there!</p>
-                            <p>I'm Ming, a full stack developer </p>
+                            <p>I'm Ming, a full stack engineer </p>
                             <p>based in New York, NY. </p>
                             <p>I build web & mobile apps on </p>
                             <p>weekdays and run wild with my two </p>
